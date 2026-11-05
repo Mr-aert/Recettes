@@ -23,8 +23,36 @@ const contentElement = document.querySelector('#recipe-content');
 const welcomeElement = document.querySelector('#welcome');
 const statusElement = document.querySelector('#sync-status');
 const statusDot = document.querySelector('.live-dot');
+const themeToggle = document.querySelector('#theme-toggle');
 const textMeasureCanvas = document.createElement('canvas');
 const textMeasureContext = textMeasureCanvas.getContext('2d');
+
+function setTheme(theme) {
+  const isDark = theme === 'dark';
+  document.documentElement.dataset.theme = isDark ? 'dark' : 'light';
+  themeToggle.setAttribute('aria-pressed', String(isDark));
+  themeToggle.setAttribute('aria-label', isDark ? 'Activer le thème clair' : 'Activer le thème sombre');
+  themeToggle.firstElementChild.textContent = isDark ? '☀' : '☾';
+  document.querySelector('meta[name="theme-color"]').content = isDark ? '#20221f' : '#f7f5ef';
+}
+
+let initialTheme = 'light';
+try {
+  initialTheme = localStorage.getItem('recipe-theme') === 'dark' ? 'dark' : 'light';
+} catch (error) {
+  console.warn('Impossible de lire le thème enregistré.', error);
+}
+setTheme(initialTheme);
+
+themeToggle.addEventListener('click', () => {
+  const theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+  setTheme(theme);
+  try {
+    localStorage.setItem('recipe-theme', theme);
+  } catch (error) {
+    console.warn('Impossible d’enregistrer le thème choisi.', error);
+  }
+});
 
 function visibleRecipes() {
   const query = searchElement.value.trim().toLocaleLowerCase('fr');
