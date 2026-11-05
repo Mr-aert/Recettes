@@ -212,7 +212,7 @@ function updateListColumnWidth(recipes) {
     + (cardStyle ? Number.parseFloat(cardStyle.paddingLeft) + Number.parseFloat(cardStyle.paddingRight) : 26);
   const articleMinimum = 280;
   const availableWidth = Math.max(minWidth, layout.clientWidth - articleMinimum);
-  const desiredWidth = contentWidth + horizontalPadding;
+  const desiredWidth = (contentWidth + horizontalPadding) / 2;
   layout.style.setProperty(
     '--recipe-list-width',
     `${Math.min(availableWidth, maxWidth, Math.max(minWidth, desiredWidth))}px`,
