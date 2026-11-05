@@ -23,6 +23,8 @@ const contentElement = document.querySelector('#recipe-content');
 const welcomeElement = document.querySelector('#welcome');
 const statusElement = document.querySelector('#sync-status');
 const statusDot = document.querySelector('.live-dot');
+const textMeasureCanvas = document.createElement('canvas');
+const textMeasureContext = textMeasureCanvas.getContext('2d');
 
 function visibleRecipes() {
   const query = searchElement.value.trim().toLocaleLowerCase('fr');
@@ -174,6 +176,51 @@ function renderList() {
     button.addEventListener('click', () => selectRecipe(recipe));
     return button;
   }));
+
+  updateListColumnWidth(recipes, heading);
+}
+
+function updateListColumnWidth(recipes, heading) {
+  const layout = document.querySelector('.content-layout');
+  const headingElement = document.querySelector('#list-title');
+  const titleElement = listElement.querySelector('.recipe-card-title');
+  const metaElement = listElement.querySelector('.recipe-card-meta');
+  const headingStyle = getComputedStyle(headingElement);
+  const titleStyle = titleElement ? getComputedStyle(titleElement) : headingStyle;
+  const metaStyle = metaElement ? getComputedStyle(metaElement) : titleStyle;
+
+  const measure = (text, style) => {
+    textMeasureContext.font = style.font;
+    return textMeasureContext.measureText(text).width;
+  };
+
+  const contentWidth = Math.max(
+    measure(heading, headingStyle),
+    ...recipes.flatMap((recipe) => [
+      measure(recipe.title, titleStyle),
+      measure([recipe.category, recipe.subcategory].filter(Boolean).join(' · '), metaStyle),
+    ]),
+  );
+  const layoutStyle = getComputedStyle(layout);
+  const maxWidthValue = layoutStyle.getPropertyValue('--recipe-list-max-width').trim();
+  const maxWidth = Number.parseFloat(maxWidthValue)
+    * (maxWidthValue.endsWith('rem')
+      ? Number.parseFloat(getComputedStyle(document.documentElement).fontSize)
+      : 1);
+  const minWidth = Number.parseFloat(layoutStyle.getPropertyValue('--recipe-list-min-width'));
+  const panelStyle = getComputedStyle(document.querySelector('.recipe-panel'));
+  const cardStyle = titleElement ? getComputedStyle(titleElement.parentElement) : null;
+  const horizontalPadding = Number.parseFloat(panelStyle.paddingLeft)
+    + Number.parseFloat(panelStyle.paddingRight)
+    + Number.parseFloat(panelStyle.borderLeftWidth)
+    + (cardStyle ? Number.parseFloat(cardStyle.paddingLeft) + Number.parseFloat(cardStyle.paddingRight) : 26);
+  const articleMinimum = 280;
+  const availableWidth = Math.max(minWidth, layout.clientWidth - articleMinimum);
+  const desiredWidth = contentWidth + horizontalPadding;
+  layout.style.setProperty(
+    '--recipe-list-width',
+    `${Math.min(availableWidth, maxWidth, Math.max(minWidth, desiredWidth))}px`,
+  );
 }
 
 function render() {
@@ -340,6 +387,7 @@ async function refreshRecipes() {
 }
 
 searchElement.addEventListener('input', renderList);
+window.addEventListener('resize', () => renderList());
 searchElement.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') {
     searchElement.value = '';
