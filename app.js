@@ -158,7 +158,6 @@ function renderList() {
     ? 'Toutes les recettes'
     : state.category.split('/').join(' / ');
   document.querySelector('#current-category').textContent = heading;
-  document.querySelector('#list-title').textContent = heading;
   document.querySelector('#recipe-count').textContent = `${recipes.length} recette${recipes.length > 1 ? 's' : ''}`;
   document.querySelector('#empty-list').hidden = recipes.length > 0;
 
@@ -177,16 +176,14 @@ function renderList() {
     return button;
   }));
 
-  updateListColumnWidth(recipes, heading);
+  updateListColumnWidth(recipes);
 }
 
-function updateListColumnWidth(recipes, heading) {
+function updateListColumnWidth(recipes) {
   const layout = document.querySelector('.content-layout');
-  const headingElement = document.querySelector('#list-title');
   const titleElement = listElement.querySelector('.recipe-card-title');
   const metaElement = listElement.querySelector('.recipe-card-meta');
-  const headingStyle = getComputedStyle(headingElement);
-  const titleStyle = titleElement ? getComputedStyle(titleElement) : headingStyle;
+  const titleStyle = titleElement ? getComputedStyle(titleElement) : getComputedStyle(listElement);
   const metaStyle = metaElement ? getComputedStyle(metaElement) : titleStyle;
 
   const measure = (text, style) => {
@@ -195,7 +192,6 @@ function updateListColumnWidth(recipes, heading) {
   };
 
   const contentWidth = Math.max(
-    measure(heading, headingStyle),
     ...recipes.flatMap((recipe) => [
       measure(recipe.title, titleStyle),
       measure([recipe.category, recipe.subcategory].filter(Boolean).join(' · '), metaStyle),

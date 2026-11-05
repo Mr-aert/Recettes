@@ -61,12 +61,11 @@ kbd { border: 1px solid #e2e0d8; border-radius: 4px; padding: 1px 5px; color: #9
 .breadcrumb strong { color: #5b5d53; font-weight: 500; }
 .separator { color: #c4c2b9; }
 .recipe-count { color: #98988c; font-size: 11px; }
-.content-layout { --recipe-list-min-width: 300px; --recipe-list-max-width: 34rem; display: grid; grid-template-columns: var(--recipe-list-width, 300px) minmax(0, 1fr); min-height: calc(100vh - 70px); }
+.content-layout { --recipe-list-min-width: 220px; --recipe-list-max-width: 30rem; display: grid; grid-template-columns: var(--recipe-list-width, 220px) minmax(0, 1fr); min-height: calc(100vh - 70px); }
 .recipe-panel { padding: 39px 24px 40px 38px; }
 .list-heading { margin: 0 0 22px; }
 .list-heading .eyebrow { margin: 0 0 8px; }
 h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; }
-.list-heading h1 { margin: 0; font-size: 26px; letter-spacing: -.3px; }
 .list-heading > p:last-child { margin: 7px 0 0; color: #939388; font-size: 12px; }
 .recipe-list { display: grid; gap: 5px; }
 .recipe-card { display: block; width: 100%; padding: 13px 13px 12px; border: 1px solid transparent; border-radius: 9px; background: transparent; text-align: left; cursor: pointer; }
@@ -107,7 +106,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; 
   .app { grid-template-columns: 215px minmax(0, 1fr); }
   .sidebar { padding-right: 13px; padding-left: 13px; }
   .topbar { padding: 0 22px; }
-  .content-layout { --recipe-list-min-width: 240px; --recipe-list-max-width: 26rem; }
+  .content-layout { --recipe-list-min-width: 200px; --recipe-list-max-width: 24rem; }
   .recipe-panel { padding-left: 22px; }
   .recipe-view { padding: 40px 25px; }
 }
@@ -128,7 +127,6 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; 
   .content-layout { display: flex; min-height: auto; flex-direction: column; }
   .recipe-panel { padding: 23px 16px 10px; border-right: 0; }
   .list-heading { margin-bottom: 13px; }
-  .list-heading h1 { font-size: 22px; }
   .list-heading > p:last-child { display: none; }
   .recipe-list { display: flex; overflow-x: auto; gap: 7px; padding-bottom: 8px; }
   .recipe-card { width: 210px; flex: 0 0 210px; border-color: var(--line); padding: 10px; }
