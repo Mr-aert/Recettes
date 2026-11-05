@@ -11,6 +11,9 @@ nécessite ni compilation ni dépendance à installer.
 3. Ajoutez ou modifiez un fichier `.md` : la liste et la recette affichée sont
    actualisées automatiquement sous deux secondes.
 
+Les dossiers et sous-dossiers sont présentés sous forme de catégories
+dépliables dans le menu latéral.
+
 Pour arrêter le serveur, utilisez `Ctrl+C` dans le terminal.
 
 ## Publier le site sur GitHub Pages

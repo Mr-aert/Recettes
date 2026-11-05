@@ -12,6 +12,8 @@ const state = {
   recipes: [],
   category: 'Toutes',
   selectedPath: '',
+  expandedDirectories: new Set(),
+  initializedDirectories: new Set(),
 };
 
 const categoriesElement = document.querySelector('#categories');
@@ -25,47 +27,134 @@ const statusDot = document.querySelector('.live-dot');
 function visibleRecipes() {
   const query = searchElement.value.trim().toLocaleLowerCase('fr');
   return state.recipes.filter((recipe) => {
-    const matchesCategory = state.category === 'Toutes' || recipe.category === state.category;
+    const matchesCategory = state.category === 'Toutes'
+      || (state.category === 'Autres'
+        ? recipe.category === 'Autres'
+        : recipe.path.startsWith(`${state.category}/`));
     const matchesQuery = !query || `${recipe.title} ${recipe.path}`.toLocaleLowerCase('fr').includes(query);
     return matchesCategory && matchesQuery;
   });
 }
 
-function renderCategories() {
-  const counts = new Map();
+function directoryTree() {
+  const roots = new Map();
   for (const recipe of state.recipes) {
-    counts.set(recipe.category, (counts.get(recipe.category) || 0) + 1);
+    const directories = recipe.path.split('/').slice(0, -1);
+    if (!directories.length) directories.push('Autres');
+    let siblings = roots;
+    let directoryPath = '';
+    for (const name of directories) {
+      directoryPath = directoryPath ? `${directoryPath}/${name}` : name;
+      if (!siblings.has(name)) {
+        siblings.set(name, { name, path: directoryPath, count: 0, children: new Map() });
+      }
+      const directory = siblings.get(name);
+      directory.count += 1;
+      siblings = directory.children;
+    }
   }
-  const categories = ['Toutes', ...Array.from(counts.keys()).sort((a, b) => a.localeCompare(b, 'fr'))];
-  categoriesElement.replaceChildren(...categories.map((category) => {
-    const button = document.createElement('button');
-    button.className = `category-button${state.category === category ? ' active' : ''}`;
-    button.type = 'button';
-    button.setAttribute('aria-pressed', String(state.category === category));
-    const name = document.createElement('span');
-    name.className = 'category-name';
-    const icon = document.createElement('span');
-    icon.className = 'category-icon';
-    icon.setAttribute('aria-hidden', 'true');
-    icon.textContent = category === 'Toutes' ? '⌂' : (CATEGORY_ICONS[category] || '📁');
-    const label = document.createElement('span');
-    label.textContent = category === 'Toutes' ? 'Toutes les recettes' : category;
-    name.append(icon, label);
-    const count = document.createElement('span');
-    count.className = 'category-count';
-    count.textContent = category === 'Toutes' ? state.recipes.length : counts.get(category);
-    button.append(name, count);
-    button.addEventListener('click', () => {
-      state.category = category;
+  return roots;
+}
+
+function renderDirectory(directory, depth) {
+  const entry = document.createElement('div');
+  entry.className = 'category-entry';
+  const row = document.createElement('div');
+  row.className = 'category-row';
+  const button = document.createElement('button');
+  button.className = `category-button${state.category === directory.path ? ' active' : ''}`;
+  button.type = 'button';
+  button.setAttribute('aria-pressed', String(state.category === directory.path));
+  button.style.setProperty('--depth', depth);
+  const name = document.createElement('span');
+  name.className = 'category-name';
+  const icon = document.createElement('span');
+  icon.className = 'category-icon';
+  icon.setAttribute('aria-hidden', 'true');
+  icon.textContent = depth === 0 ? (CATEGORY_ICONS[directory.name] || '📁') : '↳';
+  const label = document.createElement('span');
+  label.textContent = directory.name;
+  name.append(icon, label);
+  const count = document.createElement('span');
+  count.className = 'category-count';
+  count.textContent = directory.count;
+  button.append(name, count);
+  button.addEventListener('click', () => {
+    state.category = directory.path;
+    render();
+  });
+  row.append(button);
+
+  const children = Array.from(directory.children.values())
+    .sort((a, b) => a.name.localeCompare(b.name, 'fr'));
+  if (children.length) {
+    if (!state.initializedDirectories.has(directory.path)) {
+      state.expandedDirectories.add(directory.path);
+      state.initializedDirectories.add(directory.path);
+    }
+    const expanded = state.expandedDirectories.has(directory.path);
+    const toggle = document.createElement('button');
+    toggle.className = 'category-toggle';
+    toggle.type = 'button';
+    toggle.setAttribute('aria-label', `${expanded ? 'Réduire' : 'Développer'} ${directory.name}`);
+    toggle.setAttribute('aria-expanded', String(expanded));
+    toggle.textContent = expanded ? '⌄' : '›';
+    toggle.addEventListener('click', () => {
+      if (state.expandedDirectories.has(directory.path)) {
+        state.expandedDirectories.delete(directory.path);
+      } else {
+        state.expandedDirectories.add(directory.path);
+      }
       render();
     });
-    return button;
+    row.append(toggle);
+  }
+
+  entry.append(row);
+  if (children.length && state.expandedDirectories.has(directory.path)) {
+    const childList = document.createElement('div');
+    childList.className = 'category-children';
+    for (const child of children) childList.append(renderDirectory(child, depth + 1));
+    entry.append(childList);
+  }
+  return entry;
+}
+
+function renderCategories() {
+  const allButton = document.createElement('button');
+  allButton.className = `category-button all-category${state.category === 'Toutes' ? ' active' : ''}`;
+  allButton.type = 'button';
+  allButton.setAttribute('aria-pressed', String(state.category === 'Toutes'));
+  const allName = document.createElement('span');
+  allName.className = 'category-name';
+  const allIcon = document.createElement('span');
+  allIcon.className = 'category-icon';
+  allIcon.setAttribute('aria-hidden', 'true');
+  allIcon.textContent = '⌂';
+  const allLabel = document.createElement('span');
+  allLabel.textContent = 'Toutes les recettes';
+  allName.append(allIcon, allLabel);
+  const allCount = document.createElement('span');
+  allCount.className = 'category-count';
+  allCount.textContent = state.recipes.length;
+  allButton.append(allName, allCount);
+  allButton.addEventListener('click', () => {
+    state.category = 'Toutes';
+    render();
+  });
+
+  const roots = Array.from(directoryTree().values())
+    .sort((a, b) => a.name.localeCompare(b.name, 'fr'));
+  categoriesElement.replaceChildren(allButton, ...roots.map((directory) => {
+    return renderDirectory(directory, 0);
   }));
 }
 
 function renderList() {
   const recipes = visibleRecipes();
-  const heading = state.category === 'Toutes' ? 'Toutes les recettes' : state.category;
+  const heading = state.category === 'Toutes'
+    ? 'Toutes les recettes'
+    : state.category.split('/').join(' / ');
   document.querySelector('#current-category').textContent = heading;
   document.querySelector('#list-title').textContent = heading;
   document.querySelector('#recipe-count').textContent = `${recipes.length} recette${recipes.length > 1 ? 's' : ''}`;
