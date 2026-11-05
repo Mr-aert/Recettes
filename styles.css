@@ -188,14 +188,18 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; 
   .brand-row { margin-bottom: 13px; }
   .brand strong { font-size: 17px; }
   .brand small, .section-label, .sidebar-bottom { display: none; }
-  .categories { display: flex; overflow-x: auto; margin: 10px -2px 0; padding-bottom: 2px; }
-  .category-button { width: auto; min-height: 32px; flex: 0 0 auto; padding: 0 10px; font-size: 11px; }
+  .categories { display: grid; flex: 0 1 auto; align-content: start; width: 100%; max-height: 32vh; overflow-x: hidden; overflow-y: auto; margin: 10px 0 0; padding: 0 2px 2px; }
+  .category-entry, .category-row, .category-children { width: 100%; min-width: 0; }
+  .category-row > .category-button { width: auto; min-height: 34px; flex: 1 1 0; padding-right: 8px; padding-left: calc(8px + var(--depth, 0) * 10px); font-size: 12px; }
+  .category-button.all-category { width: 100%; min-height: 34px; flex: 0 0 auto; padding: 0 8px; font-size: 12px; }
+  .category-name { min-width: 0; flex: 1 1 auto; gap: 7px; }
+  .category-toggle { flex-basis: 30px; width: 30px; height: 32px; }
   .category-icon { display: none; }
   .category-count { margin-left: 2px; }
   .search { height: 38px; }
   .topbar { height: 49px; padding: 0 16px; }
   .content-layout { display: flex; min-height: auto; flex-direction: column; }
-  .recipe-panel { padding: 23px 16px 10px; border-right: 0; }
+  .recipe-panel { padding: 23px 16px 10px; }
   .recipe-list { display: flex; overflow-x: auto; gap: 7px; padding-bottom: 8px; }
   .recipe-card { width: 210px; flex: 0 0 210px; border-color: var(--line); padding: 10px; }
   .recipe-view { min-height: 50vh; padding: 20px 18px 50px; border-top: 1px solid var(--line); }
