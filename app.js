@@ -1,0 +1,266 @@
+const CATEGORY_ICONS = {
+  LAITS: '🥛',
+  MALADIE: '🌿',
+  PATES: '🥧',
+  SALEES: '🍲',
+  SOUPES: '🍵',
+  SUCREES: '🍰',
+  Autres: '🍽️',
+};
+
+const state = {
+  recipes: [],
+  category: 'Toutes',
+  selectedPath: '',
+};
+
+const categoriesElement = document.querySelector('#categories');
+const listElement = document.querySelector('#recipe-list');
+const searchElement = document.querySelector('#search');
+const contentElement = document.querySelector('#recipe-content');
+const welcomeElement = document.querySelector('#welcome');
+const statusElement = document.querySelector('#sync-status');
+const statusDot = document.querySelector('.live-dot');
+
+function visibleRecipes() {
+  const query = searchElement.value.trim().toLocaleLowerCase('fr');
+  return state.recipes.filter((recipe) => {
+    const matchesCategory = state.category === 'Toutes' || recipe.category === state.category;
+    const matchesQuery = !query || `${recipe.title} ${recipe.path}`.toLocaleLowerCase('fr').includes(query);
+    return matchesCategory && matchesQuery;
+  });
+}
+
+function renderCategories() {
+  const counts = new Map();
+  for (const recipe of state.recipes) {
+    counts.set(recipe.category, (counts.get(recipe.category) || 0) + 1);
+  }
+  const categories = ['Toutes', ...Array.from(counts.keys()).sort((a, b) => a.localeCompare(b, 'fr'))];
+  categoriesElement.replaceChildren(...categories.map((category) => {
+    const button = document.createElement('button');
+    button.className = `category-button${state.category === category ? ' active' : ''}`;
+    button.type = 'button';
+    button.setAttribute('aria-pressed', String(state.category === category));
+    const name = document.createElement('span');
+    name.className = 'category-name';
+    const icon = document.createElement('span');
+    icon.className = 'category-icon';
+    icon.setAttribute('aria-hidden', 'true');
+    icon.textContent = category === 'Toutes' ? '⌂' : (CATEGORY_ICONS[category] || '📁');
+    const label = document.createElement('span');
+    label.textContent = category === 'Toutes' ? 'Toutes les recettes' : category;
+    name.append(icon, label);
+    const count = document.createElement('span');
+    count.className = 'category-count';
+    count.textContent = category === 'Toutes' ? state.recipes.length : counts.get(category);
+    button.append(name, count);
+    button.addEventListener('click', () => {
+      state.category = category;
+      render();
+    });
+    return button;
+  }));
+}
+
+function renderList() {
+  const recipes = visibleRecipes();
+  const heading = state.category === 'Toutes' ? 'Toutes les recettes' : state.category;
+  document.querySelector('#current-category').textContent = heading;
+  document.querySelector('#list-title').textContent = heading;
+  document.querySelector('#recipe-count').textContent = `${recipes.length} recette${recipes.length > 1 ? 's' : ''}`;
+  document.querySelector('#empty-list').hidden = recipes.length > 0;
+
+  listElement.replaceChildren(...recipes.map((recipe) => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = `recipe-card${recipe.path === state.selectedPath ? ' active' : ''}`;
+    const title = document.createElement('span');
+    title.className = 'recipe-card-title';
+    title.textContent = recipe.title;
+    const meta = document.createElement('span');
+    meta.className = 'recipe-card-meta';
+    meta.textContent = [recipe.category, recipe.subcategory].filter(Boolean).join(' · ');
+    button.append(title, meta);
+    button.addEventListener('click', () => selectRecipe(recipe));
+    return button;
+  }));
+}
+
+function render() {
+  renderCategories();
+  renderList();
+}
+
+function escapeHtml(text) {
+  return text.replace(/[&<>"']/g, (character) => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
+  })[character]);
+}
+
+function inlineMarkdown(text) {
+  let html = escapeHtml(text);
+  html = html.replace(/`([^`]+)`/g, '<code>$1</code>');
+  html = html.replace(/\*\*(.+?)\*\*|__(.+?)__/g, '<strong>$1$2</strong>');
+  html = html.replace(/~~(.+?)~~/g, '<del>$1</del>');
+  html = html.replace(/(^|[^*])\*([^*\n]+)\*|(^|[^_])_([^_\n]+)_/g,
+    (match, a, b, c, d) => `${a || c || ''}<em>${b || d}</em>`);
+  html = html.replace(/\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g,
+    '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
+  return html;
+}
+
+function markdownToHtml(markdown) {
+  const lines = markdown.replace(/\r\n?/g, '\n').split('\n');
+  const output = [];
+  let listType = '';
+  let inCode = false;
+  let codeLines = [];
+  let tableLines = [];
+
+  const closeList = () => {
+    if (listType) output.push(`</${listType}>`);
+    listType = '';
+  };
+  const flushTable = () => {
+    if (!tableLines.length) return;
+    const rows = tableLines.filter((line) => !/^\s*\|?[\s:|-]+\|?\s*$/.test(line));
+    const cells = rows.map((line) => line.trim().replace(/^\||\|$/g, '').split('|').map((cell) => cell.trim()));
+    if (cells.length) {
+      output.push('<table><thead><tr>');
+      cells[0].forEach((cell) => output.push(`<th>${inlineMarkdown(cell)}</th>`));
+      output.push('</tr></thead><tbody>');
+      cells.slice(1).forEach((row) => {
+        output.push('<tr>');
+        cells[0].forEach((_, index) => output.push(`<td>${inlineMarkdown(row[index] || '')}</td>`));
+        output.push('</tr>');
+      });
+      output.push('</tbody></table>');
+    }
+    tableLines = [];
+  };
+
+  for (const line of lines) {
+    if (/^\s*```/.test(line)) {
+      closeList();
+      flushTable();
+      if (inCode) {
+        output.push(`<pre><code>${escapeHtml(codeLines.join('\n'))}</code></pre>`);
+        codeLines = [];
+      }
+      inCode = !inCode;
+      continue;
+    }
+    if (inCode) {
+      codeLines.push(line);
+      continue;
+    }
+    if (line.includes('|') && /^\s*\|?.+\|.+/.test(line)) {
+      closeList();
+      tableLines.push(line);
+      continue;
+    }
+    flushTable();
+    const heading = line.match(/^\s{0,3}(#{1,6})\s+(.+?)\s*#*\s*$/);
+    const unordered = line.match(/^\s*[-+*]\s+(.+)$/);
+    const ordered = line.match(/^\s*\d+[.)]\s+(.+)$/);
+    if (!line.trim()) {
+      closeList();
+      continue;
+    }
+    if (heading) {
+      closeList();
+      const level = Math.min(Number(heading[1].length) + 1, 4);
+      output.push(`<h${level}>${inlineMarkdown(heading[2])}</h${level}>`);
+    } else if (/^\s*(---+|___+|\*\*\*+)\s*$/.test(line)) {
+      closeList();
+      output.push('<hr>');
+    } else if (/^\s*>\s?/.test(line)) {
+      closeList();
+      output.push(`<blockquote>${inlineMarkdown(line.replace(/^\s*>\s?/, ''))}</blockquote>`);
+    } else if (unordered || ordered) {
+      const type = unordered ? 'ul' : 'ol';
+      if (listType !== type) {
+        closeList();
+        output.push(`<${type}>`);
+        listType = type;
+      }
+      const item = (unordered || ordered)[1];
+      output.push(`<li>${inlineMarkdown(item)}</li>`);
+    } else {
+      closeList();
+      output.push(`<p>${inlineMarkdown(line)}</p>`);
+    }
+  }
+  closeList();
+  flushTable();
+  if (inCode) output.push(`<pre><code>${escapeHtml(codeLines.join('\n'))}</code></pre>`);
+  return output.join('\n');
+}
+
+function selectRecipe(recipe) {
+  state.selectedPath = recipe.path;
+  renderList();
+  welcomeElement.hidden = true;
+  contentElement.hidden = false;
+  contentElement.innerHTML = markdownToHtml(recipe.content);
+}
+
+async function refreshRecipes() {
+  let live = false;
+  try {
+    let response = await fetch(new URL('api/recipes', window.location.href), { cache: 'no-store' });
+    if (response.ok) {
+      live = true;
+    } else {
+      response = await fetch(new URL('recipes.json', window.location.href), { cache: 'no-store' });
+    }
+    if (!response.ok) throw new Error(`Erreur HTTP ${response.status}`);
+    const data = await response.json();
+    const previous = new Map(state.recipes.map((recipe) => [recipe.path, recipe.digest]));
+    const next = new Map(data.recipes.map((recipe) => [recipe.path, recipe.digest]));
+    const changed = previous.size !== next.size
+      || Array.from(next).some(([path, signature]) => previous.get(path) !== signature);
+    state.recipes = data.recipes;
+    statusElement.textContent = live
+      ? 'Synchronisé · actualisation automatique'
+      : 'Publié sur GitHub Pages · actualisé après chaque push';
+    statusDot.classList.remove('offline');
+    if (changed) {
+      const selected = state.recipes.find((recipe) => recipe.path === state.selectedPath);
+      if (!selected) {
+        state.selectedPath = '';
+        contentElement.hidden = true;
+        welcomeElement.hidden = false;
+      } else if (previous.get(selected.path) !== next.get(selected.path)) {
+        selectRecipe(selected);
+      }
+      render();
+    } else if (!state.recipes.some((recipe) => recipe.path === state.selectedPath) && state.selectedPath) {
+      state.selectedPath = '';
+      contentElement.hidden = true;
+      welcomeElement.hidden = false;
+      render();
+    }
+  } catch (error) {
+    statusElement.textContent = `Serveur indisponible · ${error.message}`;
+    statusDot.classList.add('offline');
+  }
+  if (live || statusDot.classList.contains('offline')) window.setTimeout(refreshRecipes, live ? 2000 : 10000);
+  else window.setTimeout(refreshRecipes, 60000);
+}
+
+searchElement.addEventListener('input', renderList);
+searchElement.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') {
+    searchElement.value = '';
+    renderList();
+  }
+});
+document.addEventListener('keydown', (event) => {
+  if (event.key === '/' && document.activeElement !== searchElement) {
+    event.preventDefault();
+    searchElement.focus();
+  }
+});
+refreshRecipes();
