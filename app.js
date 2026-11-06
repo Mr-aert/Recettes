@@ -111,7 +111,6 @@ function recipeDetails(recipe) {
   const servingValue = metadata.portions || metadata.servings;
   const servingMatch = String(servingValue || body).match(/(?:pour\s+)?(\d+)\s*(?:personnes|portions)/i);
   const portions = servingValue ? timeValue(servingValue) : servingMatch ? Number(servingMatch[1]) : 0;
-  const tags = Array.isArray(metadata.tags) ? metadata.tags : [];
   const image = metadata.image || '';
   return {
     ...recipe,
@@ -122,7 +121,6 @@ function recipeDetails(recipe) {
     portions,
     image,
     imageAlt: metadata.image_alt || title,
-    vegetarian: tags.includes('vegetarien') || tags.includes('végétarien') || tags.includes('vegetarienne'),
   };
 }
 
@@ -162,9 +160,7 @@ function visibleRecipes() {
         : recipe.path.startsWith(`${state.category}/`));
     const matchesQuery = !query || normalizeText(`${recipe.title} ${recipe.path} ${recipe.body}`).includes(query);
     const matchesFilter = state.filter === 'all'
-      || (state.filter === 'favorites' && state.favorites.has(recipe.path))
-      || (state.filter === 'vegetarian' && recipe.vegetarian)
-      || (state.filter === 'quick' && recipe.totalMinutes > 0 && recipe.totalMinutes <= 30);
+      || (state.filter === 'favorites' && state.favorites.has(recipe.path));
     return matchesCategory && matchesQuery && matchesFilter;
   });
 }
@@ -298,14 +294,6 @@ function renderList() {
     const active = button.dataset.filter === state.filter;
     button.classList.toggle('active', active);
     button.setAttribute('aria-pressed', String(active));
-    if (button.dataset.filter === 'quick') {
-      button.disabled = !state.recipes.some((recipe) => recipe.totalMinutes > 0 && recipe.totalMinutes <= 30);
-      button.title = button.disabled ? 'Ajoutez un temps total à une recette pour activer ce filtre.' : '';
-    }
-    if (button.dataset.filter === 'vegetarian') {
-      button.disabled = !state.recipes.some((recipe) => recipe.vegetarian);
-      button.title = button.disabled ? 'Ajoutez le tag « vegetarien » aux recettes concernées.' : '';
-    }
   });
 
   listElement.replaceChildren(...recipes.map((recipe) => {

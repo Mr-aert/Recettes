@@ -22,9 +22,8 @@ quand la recette indique son nombre de portions.
 
 ## Ajouter des informations à une recette
 
-Pour afficher une durée, des portions, une photo ou activer les filtres
-« Végétariennes » et « ≤ 30 min », ajoutez un en-tête facultatif au début du
-fichier Markdown :
+Pour afficher une durée, des portions ou une photo, ajoutez un en-tête
+facultatif au début du fichier Markdown :
 
 ```yaml
 ---
@@ -32,18 +31,13 @@ title: Dahl de lentilles corail
 preparation: 10
 cuisson: 25
 portions: 4
-tags: [vegetarien]
 image: photos/dahl.jpg
 image_alt: Dahl de lentilles corail servi dans un bol
 ---
 ```
 
-Les durées sont exprimées en minutes. Le filtre végétarien se base uniquement
-sur le tag `vegetarien` explicite ; le filtre rapide utilise le temps total
-calculé ou le champ `temps_total`. Les filtres correspondants restent désactivés
-tant qu’aucune recette ne dispose de l’information nécessaire. Les images
-doivent être accessibles à l’adresse indiquée, relativement au fichier de la
-recette.
+Les durées sont exprimées en minutes. Les images doivent être accessibles à
+l’adresse indiquée, relativement au fichier de la recette.
 
 Les intitulés affichés dans le menu peuvent être différents des noms de dossiers,
 sans changer l’organisation des fichiers Markdown.
