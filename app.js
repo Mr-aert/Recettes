@@ -44,6 +44,7 @@ const state = {
   category: 'Toutes',
   filter: 'all',
   selectedPath: '',
+  isHomePage: true,
   expandedDirectories: new Set(),
   initializedDirectories: new Set(),
   favorites: new Set(Array.isArray(savedFavorites) ? savedFavorites : []),
@@ -52,6 +53,7 @@ const state = {
 };
 
 const categoriesElement = document.querySelector('#categories');
+const appElement = document.querySelector('.app');
 const menuOfTheDayElement = document.querySelector('#menu-of-the-day');
 const menuOfTheDayListElement = document.querySelector('#menu-of-the-day-list');
 const listElement = document.querySelector('#recipe-list');
@@ -219,6 +221,7 @@ function renderDirectory(directory, depth) {
   count.textContent = directory.count;
   button.append(name, count);
   button.addEventListener('click', () => {
+    state.isHomePage = false;
     state.category = directory.path;
     render();
   });
@@ -331,6 +334,7 @@ function renderCategories() {
   allCount.textContent = state.recipes.length;
   allButton.append(allName, allCount);
   allButton.addEventListener('click', () => {
+    state.isHomePage = false;
     state.category = 'Toutes';
     render();
   });
@@ -386,6 +390,7 @@ function renderList() {
 }
 
 function render() {
+  appElement.classList.toggle('home-page', state.isHomePage);
   renderMenuOfTheDay();
   renderCategories();
   renderList();
@@ -655,6 +660,8 @@ function setCookingStep(steps, index) {
 }
 
 function selectRecipe(recipe, updateHistory = true) {
+  state.isHomePage = false;
+  appElement.classList.remove('home-page');
   state.selectedPath = recipe.path;
   renderList();
   welcomeElement.hidden = true;
@@ -832,6 +839,7 @@ async function refreshRecipes() {
       const selected = state.recipes.find((recipe) => recipe.path === state.selectedPath);
       if (!selected) {
         state.selectedPath = '';
+        state.isHomePage = true;
         contentElement.hidden = true;
         welcomeElement.hidden = false;
         document.title = 'Mes recettes';
@@ -846,6 +854,7 @@ async function refreshRecipes() {
       selectRecipe(sharedRecipe, false);
     } else if (!state.recipes.some((recipe) => recipe.path === state.selectedPath) && state.selectedPath) {
       state.selectedPath = '';
+      state.isHomePage = true;
       contentElement.hidden = true;
       welcomeElement.hidden = false;
       document.title = 'Mes recettes';
@@ -859,18 +868,22 @@ async function refreshRecipes() {
   else window.setTimeout(refreshRecipes, 60000);
 }
 
-searchElement.addEventListener('input', renderList);
+searchElement.addEventListener('input', () => {
+  state.isHomePage = false;
+  render();
+});
 document.querySelectorAll('.filter-chip').forEach((button) => {
   button.addEventListener('click', () => {
     if (button.disabled) return;
+    state.isHomePage = false;
     state.filter = button.dataset.filter;
-    renderList();
+    render();
   });
 });
 searchElement.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') {
     searchElement.value = '';
-    renderList();
+    render();
   }
 });
 document.addEventListener('keydown', (event) => {
@@ -893,6 +906,14 @@ window.addEventListener('popstate', () => {
   const path = new URLSearchParams(window.location.search).get('recipe');
   const recipe = state.recipes.find((entry) => entry.path === path);
   if (recipe) selectRecipe(recipe, false);
+  else {
+    state.selectedPath = '';
+    state.isHomePage = true;
+    contentElement.hidden = true;
+    welcomeElement.hidden = false;
+    document.title = 'Mes recettes';
+    render();
+  }
 });
 renderShoppingList();
 saveShoppingList();
