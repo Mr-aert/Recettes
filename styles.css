@@ -204,7 +204,8 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; 
 .portion-control { display: inline-flex; align-items: center; gap: 7px; margin-left: auto; color: var(--muted); font-size: 11px; }
 .portion-control button { width: 27px; height: 27px; font-size: 16px; }
 .portion-control output { min-width: 19px; color: var(--ink); text-align: center; font-weight: 600; }
-.ingredient-check { width: 17px; height: 17px; flex: 0 0 17px; margin: 3px 8px 0 0; accent-color: var(--green); vertical-align: top; }
+.ingredient-check { display: none; width: 17px; height: 17px; flex: 0 0 17px; margin: 3px 8px 0 0; accent-color: var(--green); vertical-align: top; }
+.cooking-mode .ingredient-check { display: inline-block; }
 .recipe-body li:has(.ingredient-check) { display: list-item; }
 .recipe-body li.checked { color: var(--muted); text-decoration: line-through; }
 .recipe-body li.current-step { padding: 12px 14px; border-radius: 9px; background: var(--welcome-note); color: var(--ink); }

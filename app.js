@@ -659,7 +659,16 @@ function setCookingStep(steps, index) {
   if (next) next.disabled = state.cookStepIndex === steps.length - 1;
 }
 
+function exitCookingMode() {
+  document.querySelector('.recipe-view').classList.remove('cooking-mode');
+  contentElement.querySelectorAll('.current-step, .completed-step').forEach((step) => {
+    step.classList.remove('current-step', 'completed-step');
+  });
+  state.cookStepIndex = 0;
+}
+
 function selectRecipe(recipe, updateHistory = true) {
+  exitCookingMode();
   state.isHomePage = false;
   appElement.classList.remove('home-page');
   state.selectedPath = recipe.path;
@@ -786,7 +795,7 @@ function selectRecipe(recipe, updateHistory = true) {
     closeCook.type = 'button';
     closeCook.className = 'action-button';
     closeCook.textContent = 'Quitter le mode cuisine';
-    closeCook.addEventListener('click', () => document.querySelector('.recipe-view').classList.remove('cooking-mode'));
+    closeCook.addEventListener('click', exitCookingMode);
     const previous = document.createElement('button');
     previous.type = 'button';
     previous.id = 'cook-previous';
