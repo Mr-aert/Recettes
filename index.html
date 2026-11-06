@@ -25,6 +25,11 @@
         </label>
         <div class="section-label">CATÉGORIES</div>
         <nav id="categories" class="categories" aria-label="Catégories"></nav>
+        <button id="shopping-open" class="shopping-open" type="button">
+          <span aria-hidden="true">🛒</span>
+          Liste de courses
+          <span id="shopping-count" class="shopping-count">0</span>
+        </button>
         <div class="sidebar-bottom">
           <span class="live-dot" aria-hidden="true"></span>
           <span id="sync-status">Chargement…</span>
@@ -38,6 +43,13 @@
         </header>
         <div class="content-layout">
           <section class="recipe-panel" aria-label="Liste des recettes">
+            <div class="list-filters" aria-label="Filtres de recettes">
+              <button class="filter-chip active" type="button" data-filter="all" aria-pressed="true">Toutes</button>
+              <button class="filter-chip" type="button" data-filter="favorites" aria-pressed="false">♥ Favoris</button>
+              <button class="filter-chip" type="button" data-filter="desserts" aria-pressed="false">Desserts</button>
+              <button class="filter-chip" type="button" data-filter="vegetarian" aria-pressed="false">Végétariennes</button>
+              <button class="filter-chip" type="button" data-filter="quick" aria-pressed="false">≤ 30 min</button>
+            </div>
             <div id="recipe-list" class="recipe-list"></div>
             <div id="empty-list" class="empty-state" hidden>Aucune recette trouvée.</div>
           </section>
@@ -55,6 +67,19 @@
         </div>
       </main>
     </div>
+    <dialog id="shopping-dialog" class="shopping-dialog" aria-labelledby="shopping-title">
+      <div class="dialog-heading">
+        <div>
+          <p class="eyebrow">À PRÉPARER</p>
+          <h2 id="shopping-title">Ma liste de courses</h2>
+        </div>
+        <button id="shopping-close" class="icon-button" type="button" aria-label="Fermer">×</button>
+      </div>
+      <div id="shopping-items" class="shopping-items"></div>
+      <div class="dialog-actions">
+        <button id="shopping-clear" class="text-button" type="button">Tout effacer</button>
+      </div>
+    </dialog>
     <script src="./app.js" defer></script>
   </body>
 </html>
