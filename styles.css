@@ -111,6 +111,13 @@ button:focus-visible, input:focus-visible { outline: 2px solid var(--green); out
 kbd { border: 1px solid var(--border-key); border-radius: 4px; padding: 1px 5px; color: var(--text-muted); font: 11px 'DM Sans', system-ui, sans-serif; }
 .section-label, .eyebrow { color: var(--text-label); font-size: 10px; font-weight: 700; letter-spacing: 1.25px; }
 .section-label { margin: 32px 0 12px 9px; }
+.menu-of-the-day { margin-top: 20px; }
+.menu-of-the-day-header { margin: 0 0 10px 9px; color: var(--text-label); font-size: 10px; font-weight: 700; letter-spacing: 1.25px; }
+.menu-of-the-day-list { display: grid; gap: 8px; }
+.menu-recipe { width: 100%; padding: 9px 10px; border: 1px solid var(--border-control); border-radius: 9px; background: var(--surface); color: inherit; text-align: left; cursor: pointer; }
+.menu-recipe:hover { background: var(--surface-hover); }
+.menu-recipe-title { display: block; color: var(--text-secondary); font-size: 12px; font-weight: 600; line-height: 1.35; }
+.menu-recipe-category { display: block; margin-top: 2px; color: var(--text-subtle); font-size: 10px; }
 .categories { display: grid; flex: 1; align-content: start; gap: 4px; min-height: 0; overflow-y: auto; }
 .category-entry { min-width: 0; }
 .category-row { display: flex; align-items: center; gap: 2px; }

@@ -13,7 +13,8 @@ const CATEGORY_LABELS = {
   MALADIE: 'Bien-être',
   PATES: 'Pâtes & bases',
   SALEES: 'Plats salés',
-  SUCREES: 'Desserts & douceurs',
+  SOUPES: 'Soupes',
+  SUCREES: 'Desserts',
 };
 
 const savedFavorites = readStoredJSON('recipe-favorites', []);
@@ -39,6 +40,7 @@ function writeStoredJSON(key, value) {
 
 const state = {
   recipes: [],
+  menuOfTheDay: [],
   category: 'Toutes',
   filter: 'all',
   selectedPath: '',
@@ -50,6 +52,8 @@ const state = {
 };
 
 const categoriesElement = document.querySelector('#categories');
+const menuOfTheDayElement = document.querySelector('#menu-of-the-day');
+const menuOfTheDayListElement = document.querySelector('#menu-of-the-day-list');
 const listElement = document.querySelector('#recipe-list');
 const searchElement = document.querySelector('#search');
 const contentElement = document.querySelector('#recipe-content');
@@ -250,6 +254,55 @@ function renderDirectory(directory, depth) {
   return entry;
 }
 
+function buildMenuOfTheDay() {
+  const savoryRecipes = state.recipes.filter((recipe) => {
+    const rootCategory = String(recipe.path.split('/')[0] || '').toUpperCase();
+    return rootCategory === 'SALEES' || rootCategory === 'SOUPES';
+  });
+  const dessertRecipes = state.recipes.filter((recipe) => {
+    const rootCategory = String(recipe.path.split('/')[0] || '').toUpperCase();
+    return rootCategory === 'SUCREES';
+  });
+
+  const savoryRecipe = savoryRecipes.length
+    ? savoryRecipes[Math.floor(Math.random() * savoryRecipes.length)]
+    : null;
+  const dessertRecipe = dessertRecipes.length
+    ? dessertRecipes[Math.floor(Math.random() * dessertRecipes.length)]
+    : null;
+
+  return [savoryRecipe, dessertRecipe].filter(Boolean);
+}
+
+function renderMenuOfTheDay() {
+  if (!menuOfTheDayElement || !menuOfTheDayListElement) return;
+  if (!state.menuOfTheDay.length) {
+    menuOfTheDayElement.hidden = true;
+    menuOfTheDayListElement.replaceChildren();
+    return;
+  }
+
+  menuOfTheDayElement.hidden = false;
+  menuOfTheDayListElement.replaceChildren(...state.menuOfTheDay.map((recipe) => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'menu-recipe';
+    button.setAttribute('aria-label', `Voir la recette ${recipe.title}`);
+    button.addEventListener('click', () => selectRecipe(recipe));
+
+    const title = document.createElement('span');
+    title.className = 'menu-recipe-title';
+    title.textContent = recipe.title;
+
+    const category = document.createElement('span');
+    category.className = 'menu-recipe-category';
+    category.textContent = displayCategory(recipe.path.split('/')[0] || 'Autres');
+
+    button.append(title, category);
+    return button;
+  }));
+}
+
 function renderCategories() {
   const allButton = document.createElement('button');
   allButton.className = `category-button all-category${state.category === 'Toutes' ? ' active' : ''}`;
@@ -324,6 +377,7 @@ function renderList() {
 }
 
 function render() {
+  renderMenuOfTheDay();
   renderCategories();
   renderList();
 }
@@ -760,6 +814,7 @@ async function refreshRecipes() {
     const changed = previous.size !== next.size
       || Array.from(next).some(([path, signature]) => previous.get(path) !== signature);
     state.recipes = data.recipes.map(recipeDetails);
+    state.menuOfTheDay = buildMenuOfTheDay();
     statusElement.textContent = live
       ? 'Synchronisé · actualisation automatique'
       : 'Publié sur GitHub Pages · actualisé après chaque push';
