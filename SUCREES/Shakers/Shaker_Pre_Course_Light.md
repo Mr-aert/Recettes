@@ -18,6 +18,4 @@
 
 - **1 pincée de sel\**
 
-- (Optionnel) 1 **càs poudre d’amande** *\*
-
-# 
+- (Optionnel) 1 **càs poudre d’amande**
