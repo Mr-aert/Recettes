@@ -222,10 +222,6 @@ function renderDirectory(directory, depth) {
   const children = Array.from(directory.children.values())
     .sort((a, b) => a.name.localeCompare(b.name, 'fr'));
   if (children.length) {
-    if (!state.initializedDirectories.has(directory.path)) {
-      state.expandedDirectories.add(directory.path);
-      state.initializedDirectories.add(directory.path);
-    }
     const expanded = state.expandedDirectories.has(directory.path);
     const toggle = document.createElement('button');
     toggle.className = 'category-toggle';
