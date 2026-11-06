@@ -113,8 +113,8 @@ kbd { border: 1px solid var(--border-key); border-radius: 4px; padding: 1px 5px;
 .section-label { margin: 32px 0 12px 9px; }
 .menu-of-the-day { margin-top: 20px; }
 .menu-of-the-day-header { margin: 0 0 10px 9px; color: var(--text-label); font-size: 10px; font-weight: 700; letter-spacing: 1.25px; }
-.menu-of-the-day-list { display: grid; gap: 8px; }
-.menu-recipe { width: 100%; padding: 9px 10px; border: 1px solid var(--border-control); border-radius: 9px; background: var(--surface); color: inherit; text-align: left; cursor: pointer; }
+.menu-of-the-day-list { display: grid; gap: 6px; }
+.menu-recipe { width: 100%; padding: 6px 10px; border: 1px solid var(--border-control); border-radius: 9px; background: var(--surface); color: inherit; text-align: left; cursor: pointer; }
 .menu-recipe:hover { background: var(--surface-hover); }
 .menu-recipe-title { display: block; color: var(--text-secondary); font-size: 12px; font-weight: 600; line-height: 1.35; }
 .menu-recipe-category { display: block; margin-top: 2px; color: var(--text-subtle); font-size: 10px; }
