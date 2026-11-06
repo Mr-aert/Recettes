@@ -257,7 +257,7 @@ function renderDirectory(directory, depth) {
 
 function buildMenuOfTheDay() {
   const excludedDessertDirectories = new Set(['shakers', 'okara', 'oats', 'barres']);
-  const excludedSavoryDirectories = new Set(['sauces', 'pain', 'tofus']);
+  const excludedSavoryDirectories = new Set(['sauces', 'pain', 'tofus', 'marinades pour tofu']);
   const savoryRecipes = state.recipes.filter((recipe) => {
     const pathParts = recipe.path.split('/');
     const rootCategory = String(pathParts[0] || '').toUpperCase();
