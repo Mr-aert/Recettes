@@ -257,9 +257,13 @@ function renderDirectory(directory, depth) {
 
 function buildMenuOfTheDay() {
   const excludedDessertDirectories = new Set(['shakers', 'okara', 'oats', 'barres']);
+  const excludedSavoryDirectories = new Set(['sauces', 'pain', 'tofus']);
   const savoryRecipes = state.recipes.filter((recipe) => {
-    const rootCategory = String(recipe.path.split('/')[0] || '').toUpperCase();
-    return rootCategory === 'SALEES';
+    const pathParts = recipe.path.split('/');
+    const rootCategory = String(pathParts[0] || '').toUpperCase();
+    const isExcluded = pathParts.slice(1, -1)
+      .some((directory) => excludedSavoryDirectories.has(directory.toLocaleLowerCase('fr')));
+    return rootCategory === 'SALEES' && !isExcluded;
   });
   const dessertRecipes = state.recipes.filter((recipe) => {
     const pathParts = recipe.path.split('/');

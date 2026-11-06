@@ -164,7 +164,8 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; 
 .empty-state { padding: 20px 10px; color: var(--text-empty); font-size: 12px; }
 .recipe-view { min-width: 0; padding: 55px clamp(28px, 6vw, 88px) 70px; }
 .welcome { max-width: 430px; margin: 70px auto 0; text-align: center; }
-.welcome-art { display: grid; place-items: center; width: 78px; height: 78px; margin: 0 auto 23px; border-radius: 26px; background: var(--welcome-art); font-size: 35px; }
+.welcome-art { display: grid; place-items: center; width: 78px; height: 78px; margin: 0 auto 23px; border-radius: 26px; background: var(--welcome-art); }
+.welcome-art img { display: block; width: 100%; height: 100%; }
 .welcome .eyebrow { margin: 0 0 12px; }
 .welcome h2 { margin: 0; font-size: 29px; }
 .welcome > p:not(.eyebrow) { max-width: 340px; margin: 12px auto 0; color: var(--muted); font-size: 13px; line-height: 1.8; }
