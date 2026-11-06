@@ -86,7 +86,7 @@ function recipeDetails(recipe) {
   const genericTitle = /^(ingr[eé]dients?|pr[eé]paration|instructions?|m[eé]thode\s+optimis[eé]e)$/i;
   const fileTitle = recipe.path.split('/').pop()
     .replace(/\.md$/i, '')
-    .replace(/_(d|l|qu)_/gi, '$1’')
+    .replace(/_(d|l|qu)_/gi, ' $1’')
     .replace(/_/g, ' ')
     .trim();
   const title = metadataTitle && !genericTitle.test(metadataTitle) ? metadataTitle : fileTitle;
@@ -346,6 +346,7 @@ function escapeHtml(text) {
 }
 
 function inlineMarkdown(text) {
+  text = text.replace(/\\(?=[\\`*_{}\[\]()#+\-.!>])/g, '');
   let html = escapeHtml(text);
   html = html.replace(/`([^`]+)`/g, '<code>$1</code>');
   html = html.replace(/\*\*(.+?)\*\*|__(.+?)__/g, '<strong>$1$2</strong>');
@@ -358,16 +359,24 @@ function inlineMarkdown(text) {
 }
 
 function markdownToHtml(markdown) {
-  const lines = markdown.replace(/\r\n?/g, '\n').split('\n');
+  const lines = markdown.replace(/\r\n?/g, '\n').split('\n')
+    .map((line) => line.replace(/\\\s*$/, ''));
   const output = [];
   let listType = '';
+  let listItemOpen = false;
   let inCode = false;
   let codeLines = [];
   let tableLines = [];
 
   const closeList = () => {
+    if (listItemOpen) output.push('</li>');
     if (listType) output.push(`</${listType}>`);
     listType = '';
+    listItemOpen = false;
+  };
+  const closeListItem = () => {
+    if (listItemOpen) output.push('</li>');
+    listItemOpen = false;
   };
   const flushTable = () => {
     if (!tableLines.length) return;
@@ -402,6 +411,7 @@ function markdownToHtml(markdown) {
       codeLines.push(line);
       continue;
     }
+    if (/^\s*<!--.*-->\s*$/.test(line)) continue;
     if (line.includes('|') && /^\s*\|?.+\|.+/.test(line)) {
       closeList();
       tableLines.push(line);
@@ -410,9 +420,8 @@ function markdownToHtml(markdown) {
     flushTable();
     const heading = line.match(/^\s{0,3}(#{1,6})\s+(.+?)\s*#*\s*$/);
     const unordered = line.match(/^\s*[-+*]\s+(.+)$/);
-    const ordered = line.match(/^\s*\d+[.)]\s+(.+)$/);
+    const ordered = line.match(/^\s*(\d+)\\?[.)]\s+(.+)$/);
     if (!line.trim()) {
-      closeList();
       continue;
     }
     if (heading) {
@@ -422,21 +431,29 @@ function markdownToHtml(markdown) {
     } else if (/^\s*(---+|___+|\*\*\*+)\s*$/.test(line)) {
       closeList();
       output.push('<hr>');
-    } else if (/^\s*>\s?/.test(line)) {
+    } else if (/^\s*\\?>\s?/.test(line)) {
       closeList();
-      output.push(`<blockquote>${inlineMarkdown(line.replace(/^\s*>\s?/, ''))}</blockquote>`);
+      output.push(`<blockquote>${inlineMarkdown(line.replace(/^\s*\\?>\s?/, ''))}</blockquote>`);
     } else if (unordered || ordered) {
       const type = unordered ? 'ul' : 'ol';
       if (listType !== type) {
         closeList();
         output.push(`<${type}>`);
         listType = type;
+      } else {
+        closeListItem();
       }
-      const item = (unordered || ordered)[1];
-      output.push(`<li>${inlineMarkdown(item)}</li>`);
+      const item = unordered ? unordered[1] : ordered[2];
+      const value = ordered ? ` value="${ordered[1]}"` : '';
+      output.push(`<li${value}>${inlineMarkdown(item)}`);
+      listItemOpen = true;
     } else {
+      if (listItemOpen) {
+        output.push(`<p>${inlineMarkdown(line.trim())}</p>`);
+        continue;
+      }
       closeList();
-      output.push(`<p>${inlineMarkdown(line)}</p>`);
+      output.push(`<p>${inlineMarkdown(line.trim())}</p>`);
     }
   }
   closeList();
