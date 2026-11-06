@@ -58,8 +58,6 @@ const statusElement = document.querySelector('#sync-status');
 const statusDot = document.querySelector('.live-dot');
 const themeToggle = document.querySelector('#theme-toggle');
 const shoppingDialog = document.querySelector('#shopping-dialog');
-const textMeasureCanvas = document.createElement('canvas');
-const textMeasureContext = textMeasureCanvas.getContext('2d');
 
 function normalizeText(text) {
   return text.toLocaleLowerCase('fr').normalize('NFD').replace(/[\u0300-\u036f]/g, '');
@@ -84,16 +82,14 @@ function recipeDetails(recipe) {
     }
   }
   const body = frontmatter ? recipe.content.slice(frontmatter[0].length) : recipe.content;
-  const plainTitle = (text) => text
-    .replace(/!\[([^\]]*)\]\([^)]+\)/g, '$1')
-    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
-    .replace(/[*_~`]/g, '')
+  const metadataTitle = typeof metadata.title === 'string' ? metadata.title.trim() : '';
+  const genericTitle = /^(ingr[eé]dients?|pr[eé]paration|instructions?|m[eé]thode\s+optimis[eé]e)$/i;
+  const fileTitle = recipe.path.split('/').pop()
+    .replace(/\.md$/i, '')
+    .replace(/_(d|l|qu)_/gi, '$1’')
+    .replace(/_/g, ' ')
     .trim();
-  const heading = body.match(/^\s{0,3}#{1,2}\s+(.+?)\s*#*\s*$/m);
-  const genericHeading = /^(ingr[eé]dients?|pr[eé]paration|instructions?)\b/i;
-  const title = metadata.title || (heading && !genericHeading.test(plainTitle(heading[1]))
-    ? plainTitle(heading[1])
-    : recipe.title);
+  const title = metadataTitle && !genericTitle.test(metadataTitle) ? metadataTitle : fileTitle;
   const timeValue = (value) => {
     const match = String(value || '').match(/\d+/);
     return match ? Number(match[0]) : 0;
@@ -167,7 +163,6 @@ function visibleRecipes() {
     const matchesQuery = !query || normalizeText(`${recipe.title} ${recipe.path} ${recipe.body}`).includes(query);
     const matchesFilter = state.filter === 'all'
       || (state.filter === 'favorites' && state.favorites.has(recipe.path))
-      || (state.filter === 'desserts' && recipe.category === 'SUCREES')
       || (state.filter === 'vegetarian' && recipe.vegetarian)
       || (state.filter === 'quick' && recipe.totalMinutes > 0 && recipe.totalMinutes <= 30);
     return matchesCategory && matchesQuery && matchesFilter;
@@ -337,48 +332,6 @@ function renderList() {
     return button;
   }));
 
-  updateListColumnWidth(recipes);
-}
-
-function updateListColumnWidth(recipes) {
-  const layout = document.querySelector('.content-layout');
-  const titleElement = listElement.querySelector('.recipe-card-title');
-  const metaElement = listElement.querySelector('.recipe-card-meta');
-  const titleStyle = titleElement ? getComputedStyle(titleElement) : getComputedStyle(listElement);
-  const metaStyle = metaElement ? getComputedStyle(metaElement) : titleStyle;
-
-  const measure = (text, style) => {
-    textMeasureContext.font = style.font;
-    return textMeasureContext.measureText(text).width;
-  };
-
-  const contentWidth = Math.max(
-    0,
-    ...recipes.flatMap((recipe) => [
-      measure(recipe.title, titleStyle),
-      measure([recipe.category, recipe.subcategory].filter(Boolean).join(' · '), metaStyle),
-    ]),
-  );
-  const layoutStyle = getComputedStyle(layout);
-  const maxWidthValue = layoutStyle.getPropertyValue('--recipe-list-max-width').trim();
-  const maxWidth = Number.parseFloat(maxWidthValue)
-    * (maxWidthValue.endsWith('rem')
-      ? Number.parseFloat(getComputedStyle(document.documentElement).fontSize)
-      : 1);
-  const minWidth = Number.parseFloat(layoutStyle.getPropertyValue('--recipe-list-min-width'));
-  const panelStyle = getComputedStyle(document.querySelector('.recipe-panel'));
-  const cardStyle = titleElement ? getComputedStyle(titleElement.parentElement) : null;
-  const horizontalPadding = Number.parseFloat(panelStyle.paddingLeft)
-    + Number.parseFloat(panelStyle.paddingRight)
-    + Number.parseFloat(panelStyle.borderLeftWidth)
-    + (cardStyle ? Number.parseFloat(cardStyle.paddingLeft) + Number.parseFloat(cardStyle.paddingRight) : 26);
-  const articleMinimum = 280;
-  const availableWidth = Math.max(minWidth, layout.clientWidth - articleMinimum);
-  const desiredWidth = (contentWidth + horizontalPadding) / 2;
-  layout.style.setProperty(
-    '--recipe-list-width',
-    `${Math.min(availableWidth, maxWidth, Math.max(minWidth, desiredWidth))}px`,
-  );
 }
 
 function render() {
@@ -845,7 +798,6 @@ document.querySelectorAll('.filter-chip').forEach((button) => {
     renderList();
   });
 });
-window.addEventListener('resize', () => renderList());
 searchElement.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') {
     searchElement.value = '';
