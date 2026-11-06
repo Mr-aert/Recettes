@@ -8,8 +8,6 @@
 
 - Optionnel : vanille, 1 datte si tu veux sucré
 
-## **⚙️ Méthode optimisée**
-
 ### **1️⃣ Enlève la peau des amandes**
 
 - Fais bouillir une casserole d’eau.

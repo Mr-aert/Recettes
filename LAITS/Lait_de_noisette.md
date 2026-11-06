@@ -6,8 +6,6 @@
 
 - Optionnel : pincée de sel, vanille, 1 datte si tu veux sucré
 
-## **⚙️ Méthode optimisée**
-
 ### **1️⃣ Trempage (important)**
 
 - Torréfier les noisettes 10 min à 160°C avant trempage
