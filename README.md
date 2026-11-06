@@ -59,3 +59,4 @@ locale apparaît sur le site après avoir été commitée et poussée vers GitHu
 puis après la fin du workflow Pages. L’utilisation de Pages avec un dépôt privé
 peut nécessiter une offre GitHub qui prend en charge Pages pour les dépôts
 privés.
+
