@@ -71,6 +71,11 @@ function displayCategory(name) {
   return CATEGORY_LABELS[name] || name;
 }
 
+function capitalizeFirstLetter(text) {
+  const [firstLetter, ...rest] = text;
+  return firstLetter ? `${firstLetter.toLocaleUpperCase('fr')}${rest.join('')}` : text;
+}
+
 function recipeDetails(recipe) {
   const frontmatter = recipe.content.match(/^---\s*\n([\s\S]*?)\n---\s*(?:\n|$)/);
   const metadata = {};
@@ -93,7 +98,7 @@ function recipeDetails(recipe) {
     .replace(/_(d|l|qu)_/gi, ' $1’')
     .replace(/_/g, ' ')
     .trim();
-  const title = metadataTitle && !genericTitle.test(metadataTitle) ? metadataTitle : fileTitle;
+  const title = capitalizeFirstLetter(metadataTitle && !genericTitle.test(metadataTitle) ? metadataTitle : fileTitle);
   const timeValue = (value) => {
     const match = String(value || '').match(/\d+/);
     return match ? Number(match[0]) : 0;
