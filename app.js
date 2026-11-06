@@ -256,13 +256,17 @@ function renderDirectory(directory, depth) {
 }
 
 function buildMenuOfTheDay() {
+  const excludedDessertDirectories = new Set(['shakers', 'okara', 'oats', 'barres']);
   const savoryRecipes = state.recipes.filter((recipe) => {
     const rootCategory = String(recipe.path.split('/')[0] || '').toUpperCase();
-    return rootCategory === 'SALEES' || rootCategory === 'SOUPES';
+    return rootCategory === 'SALEES';
   });
   const dessertRecipes = state.recipes.filter((recipe) => {
-    const rootCategory = String(recipe.path.split('/')[0] || '').toUpperCase();
-    return rootCategory === 'SUCREES';
+    const pathParts = recipe.path.split('/');
+    const rootCategory = String(pathParts[0] || '').toUpperCase();
+    const isExcluded = pathParts.slice(1, -1)
+      .some((directory) => excludedDessertDirectories.has(directory.toLocaleLowerCase('fr')));
+    return rootCategory === 'SUCREES' && !isExcluded;
   });
 
   const savoryRecipe = savoryRecipes.length
