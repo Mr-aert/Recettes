@@ -111,6 +111,7 @@ function recipeDetails(recipe) {
   const servingValue = metadata.portions || metadata.servings;
   const servingMatch = String(servingValue || body).match(/(?:pour\s+)?(\d+)\s*(?:personnes|portions)/i);
   const portions = servingValue ? timeValue(servingValue) : servingMatch ? Number(servingMatch[1]) : 0;
+  const tags = Array.isArray(metadata.tags) ? metadata.tags : [];
   const image = metadata.image || '';
   return {
     ...recipe,
@@ -740,7 +741,6 @@ function selectRecipe(recipe, updateHistory = true) {
     });
     actions.append(cookButton);
     contentElement.append(cookControls);
-    setCookingStep(steps, 0);
   }
 }
 
