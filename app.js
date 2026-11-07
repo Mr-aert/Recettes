@@ -121,8 +121,17 @@ function recipeDetails(recipe) {
   }
   totalMinutes ||= preparation && cooking ? preparation + cooking : preparation || cooking;
   const servingValue = metadata.portions || metadata.servings;
-  const servingMatch = String(servingValue || body).match(/(?:pour\s+)?(\d+)\s*(?:personnes|portions)/i);
-  const portions = servingValue ? timeValue(servingValue) : servingMatch ? Number(servingMatch[1]) : 0;
+  const servingLine = body.split('\n')
+    .map((line) => line.replace(/[*_`|]/g, ' ').trim())
+    .find((line) => /(?:portions?\s*:?\s*)?(?:pour\s+)?\d+(?:\s*(?:à|–|-)\s*\d+)?\s*(?:personnes|portions)\b/i.test(line));
+  const servingMatch = servingLine?.match(/(?:portions?\s*:?\s*)?(?:pour\s+)?(\d+)(?:\s*(?:à|–|-)\s*(\d+))?\s*(?:personnes|portions)\b/i);
+  const metadataPortionMatch = String(servingValue || '').match(/(\d+)(?:[ \t]*(?:à|–|-)[ \t]*(\d+))?/i);
+  const portionRange = metadataPortionMatch || servingMatch;
+  const portions = portionRange
+    ? Math.round((Number(portionRange[1]) + Number(portionRange[2] || portionRange[1])) / 2)
+    : 0;
+  const portionsEstimated = !portions;
+  const resolvedPortions = portions || 4;
   const tags = Array.isArray(metadata.tags) ? metadata.tags : [];
   const image = metadata.image || '';
   return {
@@ -131,7 +140,8 @@ function recipeDetails(recipe) {
     body,
     tags,
     totalMinutes,
-    portions,
+    portions: resolvedPortions,
+    portionsEstimated,
     image,
     imageAlt: metadata.image_alt || title,
   };
@@ -595,7 +605,10 @@ function addIngredientsToShopping(recipe, ingredients) {
   for (const [index, ingredient] of ingredients.entries()) {
     const id = `${recipe.path}:${index}`;
     if (state.shoppingList.some((item) => item.id === id)) continue;
-    state.shoppingList.push({ id, text: ingredient.textContent.trim(), recipe: recipe.title });
+    const text = ingredient.tagName === 'TR'
+      ? Array.from(ingredient.cells, (cell) => cell.textContent.trim()).join(' ')
+      : ingredient.textContent.trim();
+    state.shoppingList.push({ id, text, recipe: recipe.title });
   }
   saveShoppingList();
   renderShoppingList();
@@ -611,13 +624,41 @@ function updateRecipeURL(recipePath, replace = false) {
 
 function ingredientItems(container) {
   const items = [];
-  const headings = Array.from(container.querySelectorAll('h2, h3, h4, h5, h6'));
-  for (const heading of headings) {
-    if (!/ingr[eé]dient/i.test(heading.textContent)) continue;
-    const level = Number(heading.tagName.slice(1));
-    for (let sibling = heading.nextElementSibling; sibling; sibling = sibling.nextElementSibling) {
-      if (/^H[2-6]$/.test(sibling.tagName) && Number(sibling.tagName.slice(1)) <= level) break;
-      if (sibling.matches('ul, ol')) items.push(...sibling.querySelectorAll('li'));
+  const children = Array.from(container.children);
+  const isHeading = (element) => /^H[2-6]$/.test(element.tagName);
+  const labelText = (element) => normalizeText(element.textContent.trim()).replace(/^[^\p{L}]*/u, '');
+  const isIngredientHeading = (element) => (
+    isHeading(element) && /^ingredients?\b/i.test(labelText(element))
+  ) || (
+    element.matches('p')
+    && /^(?:strong|b)$/.test(element.firstElementChild?.tagName.toLowerCase() || '')
+    && /^ingredients?\b/i.test(labelText(element))
+  );
+  const isPreparationHeading = (element) => isHeading(element)
+    && /^(?:preparation|instructions?|recette|methode|etapes?|realisation|procedure)\b/i.test(labelText(element));
+  const addIngredientsFrom = (element) => {
+    if (element.matches('ul, ol')) items.push(...element.querySelectorAll('li'));
+    else if (element.matches('table')) items.push(...element.querySelectorAll('tr'));
+    else if (element.matches('p') && element.textContent.trim()) items.push(element);
+  };
+  const anchors = children.filter(isIngredientHeading);
+
+  for (const anchor of anchors) {
+    const level = isHeading(anchor) ? Number(anchor.tagName.slice(1)) : 2;
+    for (let index = children.indexOf(anchor) + 1; index < children.length; index += 1) {
+      const sibling = children[index];
+      if (isHeading(sibling) && Number(sibling.tagName.slice(1)) <= level) break;
+      if (isPreparationHeading(sibling)) break;
+      if (sibling.matches('p') && /^(?:strong|b)$/.test(sibling.firstElementChild?.tagName.toLowerCase() || '')
+        && /^(?:preparation|instructions?|recette|methode|etapes?|realisation|procedure)\b/i.test(labelText(sibling))) break;
+      addIngredientsFrom(sibling);
+    }
+  }
+
+  if (!items.length && !anchors.length) {
+    for (const child of children) {
+      if (isPreparationHeading(child)) break;
+      addIngredientsFrom(child);
     }
   }
   return items;
@@ -694,7 +735,9 @@ function preparationItems(container, ingredients) {
 function ingredientCheckboxes(recipe, ingredients) {
   const checkedItems = new Set(readStoredJSON(`recipe-checked:${recipe.path}`, []));
   for (const [index, item] of ingredients.entries()) {
-    item.dataset.originalText = item.textContent.trim();
+    item.dataset.originalText = item.tagName === 'TR'
+      ? Array.from(item.cells, (cell) => cell.textContent.trim()).join(' ')
+      : item.textContent.trim();
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
     checkbox.className = 'ingredient-check';
@@ -708,23 +751,36 @@ function ingredientCheckboxes(recipe, ingredients) {
       else current.delete(index);
       writeStoredJSON(`recipe-checked:${recipe.path}`, [...current]);
     });
-    item.prepend(checkbox);
+    if (item.tagName === 'TR') (item.cells[0] || item).append(checkbox);
+    else item.prepend(checkbox);
   }
 }
 
 function applyPortionScaling(ingredients, basePortions, portions) {
-  for (const item of ingredients) {
-    const original = item.dataset.originalText;
-    const amount = original.match(/^(\s*)(\d+(?:[.,]\d+)?|½|¼|¾|⅓|⅔)(?=\s|$)(.*)$/);
-    if (!amount) continue;
+  const scaleText = (item, original) => {
+    const amount = original.match(/^(\s*)(\d+(?:[.,]\d+)?(?:\s*\/\s*\d+)?|½|¼|¾|⅓|⅔)(?=\s|[a-zA-Zµμ%°]|$)(.*)$/);
+    if (!amount) return false;
     const fractions = { '½': 0.5, '¼': 0.25, '¾': 0.75, '⅓': 1 / 3, '⅔': 2 / 3 };
-    const number = fractions[amount[2]] ?? Number(amount[2].replace(',', '.'));
+    const fraction = amount[2].match(/^(\d+(?:[.,]\d+)?)(?:\s*\/\s*(\d+))?$/);
+    const number = fractions[amount[2]] ?? Number(fraction[1].replace(',', '.')) / Number(fraction[2] || 1);
     const scaled = Math.round(number * portions / basePortions * 100) / 100;
     const display = Number.isInteger(scaled)
       ? String(scaled)
       : String(scaled).replace('.', ',');
     const checkbox = item.querySelector('.ingredient-check');
     item.replaceChildren(...(checkbox ? [checkbox] : []), document.createTextNode(`${amount[1]}${display}${amount[3]}`));
+    return true;
+  };
+  for (const item of ingredients) {
+    if (item.tagName === 'TR') {
+      for (const cell of item.cells) {
+        const original = cell.dataset.originalText ?? cell.textContent.trim();
+        cell.dataset.originalText = original;
+        if (scaleText(cell, original)) break;
+      }
+    } else {
+      scaleText(item, item.dataset.originalText);
+    }
   }
 }
 
@@ -782,7 +838,9 @@ function selectRecipe(recipe, updateHistory = true) {
   metadata.className = 'recipe-metadata';
   const metadataParts = [];
   if (recipe.totalMinutes) metadataParts.push(`⏱ ${recipe.totalMinutes} min`);
-  if (recipe.portions) metadataParts.push(`🍽 ${recipe.portions} portions`);
+  if (recipe.portions) {
+    metadataParts.push(`🍽 ${recipe.portions} portions${recipe.portionsEstimated ? ' (estimées)' : ''}`);
+  }
   if (recipe.tags.length) metadataParts.push(...recipe.tags.map((tag) => `#${tag}`));
   metadata.textContent = metadataParts.join('  ·  ');
   metadata.hidden = !metadataParts.length;
@@ -843,7 +901,8 @@ function selectRecipe(recipe, updateHistory = true) {
     const portionControl = document.createElement('div');
     portionControl.className = 'portion-control';
     const label = document.createElement('span');
-    label.textContent = 'Portions';
+    label.textContent = recipe.portionsEstimated ? 'Portions estimées' : 'Portions';
+    if (recipe.portionsEstimated) label.title = 'Base estimée à 4 portions, à ajuster selon votre recette.';
     const decrease = document.createElement('button');
     decrease.type = 'button';
     decrease.setAttribute('aria-label', 'Diminuer les portions');
