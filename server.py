@@ -3,6 +3,7 @@
 
 import hashlib
 import json
+import subprocess
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import parse_qs, urlsplit
@@ -12,8 +13,42 @@ ROOT = Path(__file__).resolve().parent
 POLL_INTERVAL_MS = 2000
 
 
+def recipe_added_dates():
+    result = subprocess.run(
+        ["git", "log", "--reverse", "--find-renames", "--diff-filter=AR",
+         "--format=%ct", "--name-status", "-z"],
+        cwd=ROOT,
+        check=True,
+        capture_output=True,
+    )
+    added_dates = {}
+    timestamp = None
+    entries = result.stdout.split(b"\0")
+    index = 0
+    while index < len(entries):
+        entry = entries[index].strip()
+        index += 1
+        if not entry:
+            continue
+        if entry.isdigit():
+            timestamp = int(entry)
+            continue
+        status = entry.decode("utf-8")
+        if status == "A":
+            path = entries[index].decode("utf-8")
+            index += 1
+            added_dates[path] = timestamp
+        elif status.startswith("R"):
+            previous_path = entries[index].decode("utf-8")
+            path = entries[index + 1].decode("utf-8")
+            index += 2
+            added_dates[path] = added_dates.pop(previous_path, timestamp)
+    return added_dates
+
+
 def recipe_list():
     recipes = []
+    added_dates = recipe_added_dates()
     for path in ROOT.rglob("*.md"):
         relative = path.relative_to(ROOT)
         if relative == Path("README.md") or not path.is_file():
@@ -35,6 +70,7 @@ def recipe_list():
             "category": parts[0] if len(parts) > 1 else "Autres",
             "subcategory": parts[-2] if len(parts) > 2 else "",
             "modified": stat.st_mtime_ns,
+            "added": added_dates.get(relative.as_posix(), int(stat.st_mtime)),
             "size": stat.st_size,
             "digest": hashlib.sha256(content.encode("utf-8")).hexdigest(),
             "content": content,

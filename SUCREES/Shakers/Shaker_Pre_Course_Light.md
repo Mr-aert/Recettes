@@ -19,3 +19,7 @@
 - **1 pincée de sel\**
 
 - (Optionnel) 1 **càs poudre d’amande**
+
+## Préparation
+
+Mixer tous les ingrédients jusqu’à obtenir une texture homogène, puis boire.

@@ -41,6 +41,7 @@ function writeStoredJSON(key, value) {
 const state = {
   recipes: [],
   menuOfTheDay: [],
+  latestRecipe: null,
   category: 'Toutes',
   filter: 'all',
   selectedPath: '',
@@ -313,6 +314,31 @@ function renderMenuOfTheDay() {
     button.append(title, category);
     return button;
   }));
+
+  const latestRecipe = state.latestRecipe;
+  const latestRecipeElement = document.querySelector('#latest-recipe');
+  if (!latestRecipeElement) return;
+  if (!latestRecipe) {
+    latestRecipeElement.replaceChildren();
+    return;
+  }
+
+  const button = document.createElement('button');
+  button.type = 'button';
+  button.className = 'menu-recipe';
+  button.setAttribute('aria-label', `Voir la recette ${latestRecipe.title}`);
+  button.addEventListener('click', () => selectRecipe(latestRecipe));
+
+  const title = document.createElement('span');
+  title.className = 'menu-recipe-title';
+  title.textContent = latestRecipe.title;
+
+  const category = document.createElement('span');
+  category.className = 'menu-recipe-category';
+  category.textContent = displayCategory(latestRecipe.path.split('/')[0] || 'Autres');
+
+  button.append(title, category);
+  latestRecipeElement.replaceChildren(button);
 }
 
 function renderCategories() {
@@ -483,7 +509,7 @@ function markdownToHtml(markdown) {
     }
     if (heading) {
       closeList();
-      const level = Math.min(Number(heading[1].length) + 1, 4);
+      const level = Math.min(Number(heading[1].length) + 1, 6);
       output.push(`<h${level}>${inlineMarkdown(heading[2])}</h${level}>`);
     } else if (/^\s*(---+|___+|\*\*\*+)\s*$/.test(line)) {
       closeList();
@@ -585,26 +611,84 @@ function updateRecipeURL(recipePath, replace = false) {
 
 function ingredientItems(container) {
   const items = [];
-  const headings = Array.from(container.querySelectorAll('h2, h3, h4'));
+  const headings = Array.from(container.querySelectorAll('h2, h3, h4, h5, h6'));
   for (const heading of headings) {
     if (!/ingr[eé]dient/i.test(heading.textContent)) continue;
-    for (let sibling = heading.nextElementSibling; sibling && !/^H[2-4]$/.test(sibling.tagName); sibling = sibling.nextElementSibling) {
+    const level = Number(heading.tagName.slice(1));
+    for (let sibling = heading.nextElementSibling; sibling; sibling = sibling.nextElementSibling) {
+      if (/^H[2-6]$/.test(sibling.tagName) && Number(sibling.tagName.slice(1)) <= level) break;
       if (sibling.matches('ul, ol')) items.push(...sibling.querySelectorAll('li'));
     }
   }
   return items;
 }
 
-function preparationItems(container) {
-  const items = [];
-  const headings = Array.from(container.querySelectorAll('h2, h3, h4'));
-  for (const heading of headings) {
-    if (!/pr[eé]paration|instructions?/i.test(heading.textContent)) continue;
-    for (let sibling = heading.nextElementSibling; sibling && !/^H[2-4]$/.test(sibling.tagName); sibling = sibling.nextElementSibling) {
-      if (sibling.matches('ol')) items.push(...sibling.querySelectorAll('li'));
+function preparationItems(container, ingredients) {
+  const items = new Set();
+  const children = Array.from(container.children);
+  const preparationLabel = /^(?:preparation|instructions?|recette|methode|etapes?|realisation|procedure|comment faire)\b/i;
+  const ingredientLabel = /^ingredients?\b/i;
+  const sectionLabel = /^(?:preparation|instructions?|recette|methode|etapes?|realisation|procedure|comment faire|ingredients?)(?:\s*:)?$/i;
+  const labelText = (element) => normalizeText(element.textContent.trim()).replace(/^[^\p{L}]*/u, '');
+  const isHeading = (element) => /^H[2-6]$/.test(element.tagName);
+  const isSectionLabel = (element) => element.matches('p') && /^(?:strong|b)$/.test(element.firstElementChild?.tagName.toLowerCase() || '')
+    && (sectionLabel.test(labelText(element)) || sectionLabel.test(labelText(element.firstElementChild)));
+  const addStepsFrom = (element) => {
+    if (element.matches('ol, ul')) {
+      element.querySelectorAll(':scope > li').forEach((item) => {
+        if (!ingredients.includes(item)) items.add(item);
+      });
+    } else if (element.matches('p') && element.textContent.trim()) {
+      items.add(element);
+    }
+  };
+  const anchors = children.filter((element) => {
+    if (isHeading(element)) return preparationLabel.test(labelText(element));
+    return isSectionLabel(element) && preparationLabel.test(labelText(element));
+  });
+
+  for (const anchor of anchors) {
+    const anchorLevel = isHeading(anchor) ? Number(anchor.tagName.slice(1)) : 2;
+    if (!isHeading(anchor) && preparationLabel.test(labelText(anchor))
+      && labelText(anchor) !== labelText(anchor.firstElementChild)) addStepsFrom(anchor);
+    for (let index = children.indexOf(anchor) + 1; index < children.length; index += 1) {
+      const sibling = children[index];
+      if (isHeading(sibling) && Number(sibling.tagName.slice(1)) <= anchorLevel) break;
+      if (isSectionLabel(sibling) && ingredientLabel.test(labelText(sibling))) break;
+      addStepsFrom(sibling);
     }
   }
-  return items;
+
+  if (!items.size) {
+    const ingredientItemsSet = new Set(ingredients);
+    container.querySelectorAll('ol > li, ul > li').forEach((item) => {
+      if (!ingredientItemsSet.has(item)) items.add(item);
+    });
+  }
+  if (!items.size) {
+    let afterIngredients = !children.some((child) => isHeading(child) && ingredientLabel.test(labelText(child)));
+    let inIngredients = false;
+    for (const child of children) {
+      if (isHeading(child) && ingredientLabel.test(labelText(child))) {
+        afterIngredients = true;
+        inIngredients = true;
+        continue;
+      }
+      if (isHeading(child)) inIngredients = false;
+      if (isSectionLabel(child) && ingredientLabel.test(labelText(child))) {
+        afterIngredients = true;
+        inIngredients = true;
+        continue;
+      }
+      if (isSectionLabel(child) && preparationLabel.test(labelText(child))) {
+        inIngredients = false;
+        afterIngredients = true;
+        continue;
+      }
+      if (afterIngredients && !inIngredients) addStepsFrom(child);
+    }
+  }
+  return Array.from(items);
 }
 
 function ingredientCheckboxes(recipe, ingredients) {
@@ -748,13 +832,13 @@ function selectRecipe(recipe, updateHistory = true) {
   const body = document.createElement('div');
   body.className = 'recipe-body';
   body.innerHTML = markdownToHtml(recipe.body);
-  const firstHeading = body.querySelector('h2, h3');
+  const firstHeading = body.querySelector('h2, h3, h4, h5, h6');
   if (firstHeading && normalizeText(firstHeading.textContent) === normalizeText(recipe.title)) firstHeading.remove();
   ingredients.push(...ingredientItems(body));
   ingredientCheckboxes(recipe, ingredients);
   contentElement.append(actions, body);
 
-  const steps = preparationItems(body);
+  const steps = preparationItems(body, ingredients);
   if (recipe.portions && ingredients.length) {
     const portionControl = document.createElement('div');
     portionControl.className = 'portion-control';
@@ -840,6 +924,9 @@ async function refreshRecipes() {
       || Array.from(next).some(([path, signature]) => previous.get(path) !== signature);
     state.recipes = data.recipes.map(recipeDetails);
     state.menuOfTheDay = buildMenuOfTheDay();
+    state.latestRecipe = state.recipes.reduce((latest, recipe) => {
+      return !latest || Number(recipe.added) > Number(latest.added) ? recipe : latest;
+    }, null);
     statusElement.textContent = live
       ? 'Synchronisé · actualisation automatique'
       : 'Publié sur GitHub Pages · actualisé après chaque push';

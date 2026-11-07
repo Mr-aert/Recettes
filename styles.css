@@ -113,6 +113,7 @@ kbd { border: 1px solid var(--border-key); border-radius: 4px; padding: 1px 5px;
 .section-label { margin: 32px 0 12px 9px; }
 .menu-of-the-day { margin-top: 20px; }
 .menu-of-the-day-header { margin: 0 0 10px 9px; color: var(--text-label); font-size: 10px; font-weight: 700; letter-spacing: 1.25px; }
+.latest-recipe-header { margin-top: 20px; }
 .menu-of-the-day-list { display: grid; gap: 6px; }
 .menu-recipe { width: 100%; padding: 6px 10px; border: 1px solid var(--border-control); border-radius: 9px; background: var(--surface); color: inherit; text-align: left; cursor: pointer; }
 .menu-recipe:hover { background: var(--surface-hover); }
@@ -178,7 +179,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; 
 .markdown { max-width: 740px; margin: 0 auto; color: var(--markdown-text); font-size: 14px; line-height: 1.8; overflow-wrap: anywhere; }
 .markdown h1 { margin: 0 0 28px; color: var(--markdown-title); font-size: clamp(30px, 4vw, 40px); line-height: 1.2; }
 .markdown h2 { margin: 34px 0 14px; padding-bottom: 9px; border-bottom: 1px solid var(--line); color: var(--markdown-heading); font-size: 24px; }
-.markdown h3, .markdown h4 { margin: 25px 0 10px; color: var(--markdown-subheading); font-size: 18px; }
+.markdown h3, .markdown h4, .markdown h5, .markdown h6 { margin: 25px 0 10px; color: var(--markdown-subheading); font-size: 18px; }
 .markdown p { margin: 12px 0; }
 .markdown ul, .markdown ol { padding-left: 24px; }
 .markdown li { margin: 6px 0; padding-left: 2px; }
@@ -208,8 +209,8 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; 
 .cooking-mode .ingredient-check { display: inline-block; }
 .recipe-body li:has(.ingredient-check) { display: list-item; }
 .recipe-body li.checked { color: var(--muted); text-decoration: line-through; }
-.recipe-body li.current-step { padding: 12px 14px; border-radius: 9px; background: var(--welcome-note); color: var(--ink); }
-.recipe-body li.completed-step { color: var(--muted); }
+.recipe-body .current-step { padding: 12px 14px; border-radius: 9px; background: var(--welcome-note); color: var(--ink); }
+.recipe-body .completed-step { color: var(--muted); }
 .cook-controls { display: none; }
 .cooking-mode { position: fixed; z-index: 20; inset: 14px; overflow-y: auto; padding: clamp(24px, 7vw, 90px); border: 1px solid var(--line); border-radius: 16px; background: var(--paper); box-shadow: 0 12px 70px #0005; }
 .cooking-mode .cook-controls { position: sticky; bottom: -1px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin: 30px -12px -12px; padding: 14px 12px; border-top: 1px solid var(--line); background: var(--paper); }
