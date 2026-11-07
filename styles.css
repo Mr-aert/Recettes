@@ -142,7 +142,7 @@ kbd { border: 1px solid var(--border-key); border-radius: 4px; padding: 1px 5px;
 .live-dot.offline { background: #d78a73; box-shadow: 0 0 0 3px #f4e3dc; }
 
 .main { min-width: 0; }
-.topbar { height: 70px; display: flex; align-items: center; justify-content: space-between; padding: 0 38px; border-bottom: 1px solid var(--line); }
+.topbar { display: none; }
 .breadcrumb { display: flex; gap: 10px; align-items: center; color: var(--text-breadcrumb); font-size: 12px; }
 .breadcrumb strong { color: var(--text-breadcrumb-current); font-weight: 500; }
 .separator { color: var(--muted); }
