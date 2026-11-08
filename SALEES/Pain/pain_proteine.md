@@ -2,7 +2,7 @@
 
 # Ingrédients
 
-- 1 200 g de fromage blanc ou de skyr
+- 1200 g de fromage blanc ou de skyr
 
 - 6 œufs
 
