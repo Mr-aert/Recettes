@@ -1,4 +1,3 @@
-# 
 
 ### Ingrédients
 _(pour 6-8 personnes)_
