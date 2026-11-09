@@ -122,6 +122,11 @@ function recipeDetails(recipe) {
     }
   }
   totalMinutes ||= preparation && cooking ? preparation + cooking : preparation || cooking;
+  const durationSpecified = Boolean(
+    totalMinutes
+    || /\b\d+(?:\s*(?:à|-|–)\s*\d+)?\s*(?:min(?:ute)?s?|h(?:eure)?s?|jours?|nuits?)\b/i.test(body)
+    || /\b(?:une|deux|quelques)\s+(?:minutes?|heures?|nuits?)\b|\b(?:demi-heure|toute (?:une )?nuit|la nuit|overnight)\b/i.test(body),
+  );
   const servingValue = metadata.portions || metadata.servings;
   const servingLine = body.split('\n')
     .map((line) => line.replace(/[*_`|]/g, ' ').trim())
@@ -142,6 +147,7 @@ function recipeDetails(recipe) {
     body,
     tags,
     totalMinutes,
+    durationSpecified,
     portions: resolvedPortions,
     portionsEstimated,
     image,
@@ -840,6 +846,7 @@ function selectRecipe(recipe, updateHistory = true) {
   metadata.className = 'recipe-metadata';
   const metadataParts = [];
   if (recipe.totalMinutes) metadataParts.push(`⏱ ${recipe.totalMinutes} min`);
+  else if (!recipe.durationSpecified) metadataParts.push('⏱ Durée non précisée');
   if (recipe.portions) {
     metadataParts.push(`🍽 ${recipe.portions} portions${recipe.portionsEstimated ? ' (estimées)' : ''}`);
   }
@@ -899,6 +906,10 @@ function selectRecipe(recipe, updateHistory = true) {
   contentElement.append(actions, body);
 
   const steps = preparationItems(body, ingredients);
+  steps.forEach((step, index) => {
+    step.classList.add('recipe-instruction-step');
+    step.style.setProperty('--step-number', `"${index + 1}. "`);
+  });
   if (recipe.portions && ingredients.length) {
     const portionControl = document.createElement('div');
     portionControl.className = 'portion-control';

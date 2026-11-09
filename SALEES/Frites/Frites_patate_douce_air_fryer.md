@@ -15,17 +15,17 @@
 
 - Épluche (ou non, selon ton goût), puis coupe en frites pas trop épaisses (les fines deviennent croustillantes, les grosses moelleuses).
 
-1.  **Trempage ?**
+2.  **Trempage facultatif (pour des frites plus croustillantes) :**
 
-- 👉 Pas obligatoire ici, mais tu peux les tremper 15-20 min dans l’eau froide **si tu veux les rendre un peu plus croustillantes**.
+- Tu peux les tremper 15 à 20 minutes dans l’eau froide, puis bien les sécher. Cette étape n’est pas obligatoire.
 
   Puis bien **sécher**, comme pour les classiques.
 
-1.  **Assaisonnement :**
+3.  **Assaisonnement :**
 
 - Mélange avec un peu d’huile, sel, et tes épices préférées. Les patates douces adorent le paprika fumé ou le curry doux.
 
-1.  **Cuisson :**
+4.  **Cuisson :**
 
     - Préchauffe le air fryer à **190°C**.
 
@@ -37,6 +37,6 @@
 
     - Surveille les 5 dernières minutes, ça peut griller vite.
 
-2.  **Finition :**
+5.  **Finition :**
 
 - Un peu de fleur de sel, ou même un filet de miel ou une sauce yaourt-épices à côté si t’es d’humeur gourmande 😋

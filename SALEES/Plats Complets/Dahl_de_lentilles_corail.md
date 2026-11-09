@@ -46,6 +46,4 @@
 
 - Tu peux mettre un peu de **piment** si t’aimes quand ça chauffe 🔥
 
-- Tu veux le rendre plus protéiné ? Ajoute des **pois chiches** ou un peu de **tofu fumé grillé** à la fin.
-
-Tu veux une version sans tomate ou avec des légumes spécifiques ? Je peux t’adapter ça aussi !
+- Pour une version plus protéinée, ajoute des **pois chiches** ou un peu de **tofu fumé grillé** à la fin.

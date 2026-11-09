@@ -25,7 +25,7 @@
 
 - Mélange la levure de boulanger avec un peu d’eau tiède et le sucre. Laisse mousser 10 minutes.
 
-1.  **Faire la pâte** :
+2.  **Faire la pâte** :
 
 - Dans un saladier, mélange la farine, le sel, la levure chimique.
 
@@ -33,17 +33,17 @@
 
   Pétris en ajoutant un peu d’eau tiède jusqu’à obtenir une pâte souple, légèrement collante mais non liquide.
 
-1.  **Repos** :
+3.  **Repos** :
 
 - Couvre d’un torchon et laisse lever 1h à température ambiante (ou plus si tu veux une pâte bien aérée).
 
-1.  **Façonnage** :
+4.  **Façonnage** :
 
 - Divise la pâte en 6 à 8 boules.
 
   Étale chaque boule en disque. Si tu veux les farcir au fromage, mets une portion au centre, referme la pâte et étale doucement.
 
-1.  **Cuisson** :
+5.  **Cuisson** :
 
 - Fais chauffer une poêle (sans matière grasse).
 

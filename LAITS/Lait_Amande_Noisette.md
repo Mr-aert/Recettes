@@ -19,9 +19,7 @@ Pour un goût supérieur :
 
 - Garde les amandes crues
 
-Pourquoi ?\
-La noisette gagne énormément à être grillée.\
-L’amande apporte la douceur et équilibre.
+**Pourquoi torréfier les noisettes ?** Elles gagnent en arôme, tandis que les amandes crues apportent de la douceur et équilibrent le goût.
 
 Laisse refroidir.
 

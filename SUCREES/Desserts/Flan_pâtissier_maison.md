@@ -1,4 +1,4 @@
-## **1. Pâte brisée maison**
+## **Pâte brisée maison**
 
 ### **Ingrédients**
 
@@ -10,7 +10,7 @@
 
 - 50 ml d’eau froide
 
-## **2. Appareil à flan**
+## **Appareil à flan**
 
 ### **Ingrédients**
 
@@ -28,72 +28,18 @@
 
 - 1 pincée de sel
 
-\
--
+## **Préparation**
 
-## LA VEILLE - APPAREIL
+### **La veille — appareil à flan**
 
-### **Étape 2 : lait vanillé**
+1. Fais chauffer le lait avec la vanille jusqu’à frémissement.
+2. Fouette les œufs avec le sucre jusqu’à ce que le mélange blanchisse, puis incorpore la maïzena et le sel.
+3. Verse progressivement le lait chaud en fouettant. Remets le mélange sur feu moyen et remue sans arrêt jusqu’à ce que la crème épaississe.
+4. Hors du feu, incorpore la crème liquide. Couvre et place au réfrigérateur pour la nuit.
 
-- Fais chauffer le lait + vanille jusqu’à frémissement
+### **Le lendemain — pâte, montage et cuisson**
 
-### **Étape 3 : base**
-
-- Fouette œufs + sucre jusqu’à blanchiment
-
-- Ajoute maïzena + sel
-
-### **Étape 4 : épaississement**
-
-- Verse le lait chaud doucement en fouettant
-
-- Remets sur feu moyen
-
-- Mélange sans arrêt jusqu’à obtenir une crème bien épaisse
-
-### **Étape 5 : finition**
-
-- Hors du feu, ajoute la crème liquide
-
-- Mettre au frigo pour la nuit
-
-\
--
-
-## CUISSON
-
-### **Préparation**
-
-- Mélange farine + sel
-
-- Ajoute le beurre → sable du bout des doigts
-
-- Ajoute l’eau progressivement jusqu’à former une pâte
-
-- Ne pas trop travailler (important pour éviter qu’elle soit dure)
-
-👉 Forme une boule, filme et mets au frigo **30 min**
-
-### **Étape 6 : fond de tarte**
-
-- Préchauffe le four à 180°C
-
-- Étale la pâte et fonce un moule (assez haut si possible)
-
-- Pique la pâte
-
-- Réserve au frigo un moment (ou le cuire seul ?)
-
-- mets l'appareil dessus ensuite
-
-### **Étape 6 : cuisson**
-
-- Enfourne **45 à 50 min à 180°C**
-
-- Le dessus doit être bien doré / tacheté brun
-
-### **Étape 7 : repos (indispensable)**
-
-- Laisse refroidir à température ambiante
-
-- Puis frigo **minimum 4h (idéalement une nuit)**
+5. Mélange la farine et le sel. Ajoute le beurre froid et sable du bout des doigts. Incorpore progressivement l’eau sans trop travailler la pâte. Forme une boule, filme-la et laisse-la reposer 30 minutes au réfrigérateur.
+6. Préchauffe le four à 180 °C. Étale la pâte, fonce un moule assez haut et pique le fond. Garde-le au frais pendant le préchauffage : la pâte ne nécessite pas de cuisson à blanc. Fouette brièvement l’appareil froid pour l’assouplir, puis verse-le sur le fond de tarte cru.
+7. Enfourne 45 à 50 minutes à 180 °C, jusqu’à ce que le dessus soit bien doré et tacheté.
+8. Laisse refroidir à température ambiante, puis place le flan au réfrigérateur au moins 4 heures, idéalement toute une nuit.

@@ -54,6 +54,6 @@
 
 8.  Laisser **refroidir complètement**, puis conserver au frigo. Se mange froid ou légèrement réchauffé.
 
-### Bonus : sauce express à côté ?
+### Sauce express en accompagnement (facultatif)
 
 Un petit yaourt nature + 1 c. à café de moutarde + un filet de citron + sel/poivre → parfait en dip frais.
