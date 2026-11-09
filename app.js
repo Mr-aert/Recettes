@@ -923,9 +923,13 @@ function selectRecipe(recipe, updateHistory = true) {
   contentElement.append(actions, body);
 
   const steps = preparationItems(body, ingredients);
-  steps.forEach((step, index) => {
+  let stepNumber = 0;
+  steps.forEach((step) => {
     step.classList.add('recipe-instruction-step');
-    step.style.setProperty('--step-number', `"${index + 1}. "`);
+    if (!step.matches('li') || step.parentElement?.tagName === 'OL') {
+      step.classList.add('recipe-numbered-step');
+      step.style.setProperty('--step-number', `"${++stepNumber}. "`);
+    }
   });
   if (recipe.portions && ingredients.length) {
     const portionControl = document.createElement('div');

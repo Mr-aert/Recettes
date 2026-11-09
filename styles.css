@@ -185,8 +185,8 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; 
 .markdown li { margin: 6px 0; padding-left: 2px; }
 .markdown li > p { margin: 4px 0 2px; }
 .markdown li::marker { color: var(--list-marker); }
-.recipe-body .recipe-instruction-step { list-style: none; }
-.recipe-body .recipe-instruction-step::before { content: var(--step-number); color: var(--green); font-weight: 700; }
+.recipe-body .recipe-numbered-step { list-style: none; }
+.recipe-body .recipe-numbered-step::before { content: var(--step-number); color: var(--green); font-weight: 700; }
 .markdown blockquote { margin: 16px 0; padding: 3px 16px; border-left: 3px solid var(--green); color: var(--markdown-quote); }
 .markdown hr { margin: 28px 0; border: 0; border-top: 1px solid var(--line); }
 .markdown table { width: 100%; margin: 18px 0; border-collapse: collapse; text-align: left; }
