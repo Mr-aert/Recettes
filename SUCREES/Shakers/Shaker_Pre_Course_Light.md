@@ -1,10 +1,3 @@
-### **✔️ Zéro lourdeur**
-
-### **✔️ Pas de jus = moins sucré mais assez d’énergie**
-
-### **✔️ Ultra digeste**
-
-### **✔️ Reste liquide au frigo**
 
 ### Ingrédients
 
