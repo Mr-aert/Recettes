@@ -652,10 +652,8 @@ function ingredientItems(container) {
   const anchors = children.filter(isIngredientHeading);
 
   for (const anchor of anchors) {
-    const level = isHeading(anchor) ? Number(anchor.tagName.slice(1)) : 2;
     for (let index = children.indexOf(anchor) + 1; index < children.length; index += 1) {
       const sibling = children[index];
-      if (isHeading(sibling) && Number(sibling.tagName.slice(1)) <= level) break;
       if (isPreparationHeading(sibling)) break;
       if (sibling.matches('p') && /^(?:strong|b)$/.test(sibling.firstElementChild?.tagName.toLowerCase() || '')
         && /^(?:preparation|instructions?|recette|methode|etapes?|realisation|procedure)\b/i.test(labelText(sibling))) break;
@@ -680,6 +678,8 @@ function preparationItems(container, ingredients) {
   const sectionLabel = /^(?:preparation|instructions?|recette|methode|etapes?|realisation|procedure|comment faire|ingredients?)(?:\s*:)?$/i;
   const labelText = (element) => normalizeText(element.textContent.trim()).replace(/^[^\p{L}]*/u, '');
   const isHeading = (element) => /^H[2-6]$/.test(element.tagName);
+  const isStepHeading = (element) => isHeading(element)
+    && /^(?:\d+\s*[.)]|(?:etape|phase)\s+\d+\b)/i.test(normalizeText(element.textContent.trim()));
   const isSectionLabel = (element) => element.matches('p') && /^(?:strong|b)$/.test(element.firstElementChild?.tagName.toLowerCase() || '')
     && (sectionLabel.test(labelText(element)) || sectionLabel.test(labelText(element.firstElementChild)));
   const addStepsFrom = (element) => {
@@ -703,7 +703,7 @@ function preparationItems(container, ingredients) {
     const sectionElements = [];
     for (let index = children.indexOf(anchor) + 1; index < children.length; index += 1) {
       const sibling = children[index];
-      if (isHeading(sibling) && Number(sibling.tagName.slice(1)) <= anchorLevel) break;
+      if (isHeading(sibling) && Number(sibling.tagName.slice(1)) <= anchorLevel && !isStepHeading(sibling)) break;
       if (isSectionLabel(sibling) && ingredientLabel.test(labelText(sibling))) break;
       sectionElements.push(sibling);
     }
