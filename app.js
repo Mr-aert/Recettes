@@ -1,6 +1,7 @@
 const CATEGORY_ICONS = {
   LAITS: '🥛',
   MALADIE: '🌿',
+  PAINS: '🥖',
   PATES: '🥧',
   SALEES: '🍲',
   SOUPES: '🍵',
@@ -11,6 +12,7 @@ const CATEGORY_ICONS = {
 const CATEGORY_LABELS = {
   LAITS: 'Boissons végétales',
   MALADIE: 'Bien-être',
+  PAINS: 'Pain',
   PATES: 'Pâtes & bases',
   SALEES: 'Plats salés',
   SOUPES: 'Soupes',
