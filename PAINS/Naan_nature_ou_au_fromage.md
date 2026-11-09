@@ -21,32 +21,8 @@
 
 ### 🔧 Préparation :
 
-1.  **Activer la levure** :
-
-- Mélange la levure de boulanger avec un peu d’eau tiède et le sucre. Laisse mousser 10 minutes.
-
-2.  **Faire la pâte** :
-
-- Dans un saladier, mélange la farine, le sel, la levure chimique.
-
-  Ajoute le yaourt, l’huile et la levure activée.
-
-  Pétris en ajoutant un peu d’eau tiède jusqu’à obtenir une pâte souple, légèrement collante mais non liquide.
-
-3.  **Repos** :
-
-- Couvre d’un torchon et laisse lever 1h à température ambiante (ou plus si tu veux une pâte bien aérée).
-
-4.  **Façonnage** :
-
-- Divise la pâte en 6 à 8 boules.
-
-  Étale chaque boule en disque. Si tu veux les farcir au fromage, mets une portion au centre, referme la pâte et étale doucement.
-
-5.  **Cuisson** :
-
-- Fais chauffer une poêle (sans matière grasse).
-
-  Fais cuire chaque naan 1 à 2 minutes de chaque côté, jusqu’à ce qu’il gonfle et colore.
-
-  Badigeonne de beurre fondu ou de ghee à la sortie, ajoute de la coriandre si tu aimes.
+1. **Activer la levure :** mélange la levure de boulanger avec un peu d’eau tiède et le sucre. Laisse mousser 10 minutes.
+2. **Faire la pâte :** dans un saladier, mélange la farine, le sel et la levure chimique. Ajoute le yaourt, l’huile et la levure activée. Pétris en ajoutant un peu d’eau tiède jusqu’à obtenir une pâte souple, légèrement collante mais non liquide.
+3. **Laisser reposer :** couvre d’un torchon et laisse lever 1 heure à température ambiante, ou plus longtemps pour une pâte plus aérée.
+4. **Façonner :** divise la pâte en 6 à 8 boules et étale chacune en disque. Pour des naans au fromage, dépose une portion au centre, referme la pâte et étale doucement.
+5. **Cuire :** fais chauffer une poêle sans matière grasse. Fais cuire chaque naan 1 à 2 minutes de chaque côté, jusqu’à ce qu’il gonfle et colore. À la sortie, badigeonne de beurre fondu ou de ghee et ajoute de la coriandre si tu le souhaites.

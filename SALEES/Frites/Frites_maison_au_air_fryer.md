@@ -11,30 +11,9 @@
 
 ### **Préparation :**
 
-1.  **Épluchage & découpe :**
-
-- Épluche les pommes de terre (ou laisse la peau pour un côté rustique), puis coupe-les en frites régulières.
-
-2.  **Trempage :**
-
-- Mets-les dans un saladier d’eau froide pendant **30 minutes à 1h**.
-
-  Ça enlève l’excès d’amidon, ce qui les rend plus croustillantes.
-
-3.  **Égouttage & séchage :**
-
-- Égoutte-les bien et **sèche-les à fond** avec un torchon propre ou du papier absorbant. L’humidité empêche la friture correcte à l’air fryer.
-
-4.  **Assaisonnement :**
-
-- Mets les frites dans un bol, ajoute un filet d’huile (pas trop), sel, épices si tu veux, et mélange bien pour enrober.
-
-5.  **Cuisson :**
-
-    - Préchauffe ton air fryer à **180-190°C** pendant 3-5 minutes.
-    - Dispose les frites en une **seule couche** dans le panier (si trop de frites, fais en plusieurs fois).
-    - Fais cuire environ **20 à 25 minutes**, en **secouant à mi-cuisson**. Ajuste selon la taille des frites et ton modèle de air fryer.
-
-6.  **Finition :**
-
-- Une pincée de sel à la sortie, et c’est prêt !
+1. **Éplucher et découper :** épluche les pommes de terre ou garde la peau pour un côté rustique, puis coupe-les en frites régulières.
+2. **Faire tremper :** mets les frites dans un saladier d’eau froide pendant 30 minutes à 1 heure pour retirer l’excès d’amidon et les rendre plus croustillantes.
+3. **Égoutter et sécher :** égoutte-les bien, puis sèche-les soigneusement avec un torchon propre ou du papier absorbant. L’humidité empêche une cuisson croustillante à l’air fryer.
+4. **Assaisonner :** mets les frites dans un bol, ajoute un filet d’huile, du sel et des épices si tu le souhaites, puis mélange pour bien les enrober.
+5. **Cuire :** préchauffe l’air fryer à 180–190 °C pendant 3 à 5 minutes. Dispose les frites en une seule couche (procède en plusieurs fournées si nécessaire), puis fais-les cuire environ 20 à 25 minutes en secouant le panier à mi-cuisson. Ajuste le temps selon leur taille et ton appareil.
+6. **Finir :** ajoute une pincée de sel à la sortie de l’air fryer.

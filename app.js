@@ -700,11 +700,28 @@ function preparationItems(container, ingredients) {
     const anchorLevel = isHeading(anchor) ? Number(anchor.tagName.slice(1)) : 2;
     if (!isHeading(anchor) && preparationLabel.test(labelText(anchor))
       && labelText(anchor) !== labelText(anchor.firstElementChild)) addStepsFrom(anchor);
+    const sectionElements = [];
     for (let index = children.indexOf(anchor) + 1; index < children.length; index += 1) {
       const sibling = children[index];
       if (isHeading(sibling) && Number(sibling.tagName.slice(1)) <= anchorLevel) break;
       if (isSectionLabel(sibling) && ingredientLabel.test(labelText(sibling))) break;
-      addStepsFrom(sibling);
+      sectionElements.push(sibling);
+    }
+    const hasNumberedSteps = sectionElements.some((element) => element.matches('ol'));
+    if (hasNumberedSteps) {
+      let previousOrderedList = null;
+      for (const element of sectionElements) {
+        if (element.matches('ol')) previousOrderedList = element;
+        else if (element.matches('ul') && previousOrderedList?.lastElementChild) {
+          previousOrderedList.lastElementChild.append(element);
+        } else if (element.matches('h1, h2, h3, h4, h5, h6, hr') || isSectionLabel(element)) {
+          previousOrderedList = null;
+        }
+      }
+    }
+    for (const element of sectionElements) {
+      if (hasNumberedSteps && (element.matches('ul, p'))) continue;
+      addStepsFrom(element);
     }
   }
 

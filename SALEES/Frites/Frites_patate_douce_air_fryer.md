@@ -11,32 +11,8 @@
 
 ### **Préparation :**
 
-1.  **Épluchage & découpe :**
-
-- Épluche (ou non, selon ton goût), puis coupe en frites pas trop épaisses (les fines deviennent croustillantes, les grosses moelleuses).
-
-2.  **Trempage facultatif (pour des frites plus croustillantes) :**
-
-- Tu peux les tremper 15 à 20 minutes dans l’eau froide, puis bien les sécher. Cette étape n’est pas obligatoire.
-
-  Puis bien **sécher**, comme pour les classiques.
-
-3.  **Assaisonnement :**
-
-- Mélange avec un peu d’huile, sel, et tes épices préférées. Les patates douces adorent le paprika fumé ou le curry doux.
-
-4.  **Cuisson :**
-
-    - Préchauffe le air fryer à **190°C**.
-
-    - Dispose les frites sans les empiler.
-
-    - Cuisson : **15 à 18 minutes**, en **remuant à mi-cuisson**.
-
-    <!-- -->
-
-    - Surveille les 5 dernières minutes, ça peut griller vite.
-
-5.  **Finition :**
-
-- Un peu de fleur de sel, ou même un filet de miel ou une sauce yaourt-épices à côté si t’es d’humeur gourmande 😋
+1. **Éplucher et découper :** épluche les patates douces (ou garde la peau selon ton goût), puis coupe-les en frites régulières, pas trop épaisses. Les fines seront plus croustillantes et les grosses plus moelleuses.
+2. **Faire tremper (facultatif) :** pour des frites plus croustillantes, trempe-les 15 à 20 minutes dans l’eau froide, puis sèche-les soigneusement.
+3. **Assaisonner :** mélange les frites avec un peu d’huile, du sel et les épices de ton choix. Le paprika fumé ou le curry doux leur conviennent bien.
+4. **Cuire :** préchauffe l’air fryer à 190 °C. Dispose les frites sans les empiler et fais-les cuire 15 à 18 minutes en les remuant à mi-cuisson. Surveille les 5 dernières minutes, car elles peuvent griller rapidement.
+5. **Finir :** ajoute un peu de fleur de sel. Tu peux aussi les servir avec un filet de miel ou une sauce au yaourt et aux épices.
