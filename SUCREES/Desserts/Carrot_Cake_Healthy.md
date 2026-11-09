@@ -18,7 +18,10 @@
 
 - 10g de noix concassées
 
-- <u>Glaçage</u> : 50g de fromage blanc 0%MG + 50g de fromage frais 0%MG type St-Moret + 1cc de sirop d'agave
+- **Glaçage** : 
+    - 50g de fromage blanc 0% 
+    - 50g de fromage frais 0% type St-Moret 
+    -    1cc de sirop d'agave
 
 ### Préparation
 
