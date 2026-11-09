@@ -1,6 +1,6 @@
 # Tajine aubergine pois chiche
 
-## Ingrédients
+### Ingrédients
 
 - 2 cas d’huile d’olive
 - 150g oignon rouges
@@ -16,7 +16,7 @@
 - 200g tomates entières pelées au jus
 - 1 feuille de laurier
 
-## Recette
+### Préparation
 
 - Émincer les oignons
 - Couper les aubergines en cubes

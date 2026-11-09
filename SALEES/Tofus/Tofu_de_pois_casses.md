@@ -1,4 +1,4 @@
-### **Ingrédients**
+### Ingrédients
 
 - 200 g de **pois cassés secs\**
 
@@ -6,14 +6,16 @@
 
 - 1 pincée de **sel** (optionnel)
 
-### **Étape 1 – Trempage (important)**
+### Préparation
+
+#### **Étape 1 – Trempage (important)**
 
 - Rince les pois cassés
 
 - Trempe-les **8 à 12 h** dans beaucoup d’eau\
   👉 moins de goût “vert” + meilleure texture
 
-### **Étape 2 – Cuisson**
+#### **Étape 2 – Cuisson**
 
 - Égoutte
 
@@ -23,14 +25,14 @@
 
 - Égoutte **un peu** mais garde de l’eau de cuisson
 
-### **Étape 3 – Mixage**
+#### **Étape 3 – Mixage**
 
 - Mixe les pois **très finement\**
 
 - Ajoute **300 à 400 ml d’eau de cuisson\**
   → tu veux une texture **lisse type crème épaisse\**
 
-### **Étape 4 – Gélification (clé du tofu)**
+#### **Étape 4 – Gélification (clé du tofu)**
 
 - Verse la purée dans une casserole
 

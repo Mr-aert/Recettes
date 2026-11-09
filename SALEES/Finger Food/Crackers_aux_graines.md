@@ -1,6 +1,6 @@
 # Crackers aux graines
 
-## Ingrédients
+### Ingrédients
 
 - 210g de mélange de graines
 - 250g farine
@@ -9,7 +9,7 @@
 - 10cl d’huile
 - 12cl d’eau
 
-## Recette
+### Préparation
 
 - Mélanger tout
 - Séparer la pâte en 2

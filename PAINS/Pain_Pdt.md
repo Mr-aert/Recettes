@@ -1,21 +1,19 @@
 # Pain Pdt
 
-# Ingrédients
+### Ingrédients
 
-| 150g      | eau                                |
-|:----------|:-----------------------------------|
-| 9g        | levure sèche **OU**                |
-| 27g       | levure fraiche                     |
-| 60g       | sucre                              |
-| 500g      | farine                             |
-| 320g      | pdt bouillies et réduites en purée |
-| 10g       | sel                                |
-| 75g       | beurre mou                         |
-| 2         | oeufs                              |
-| 1         | jaune d’oeuf                       |
-| Optionnel | sésame                             |
+- 150g eau                               
+- 9g   levure sèche **OU**               
+- 27g  levure fraiche                    
+- 60g  sucre                             
+- 500g farine                            
+- 320g pdt bouillies et réduites en purée
+- 10g  sel                               
+- 75g  beurre mou                        
+- 2    oeufs                             
+- 1    jaune d’oeuf                                                
 
-# Recette
+### Préparation
 
 ### Activer la levure
 
@@ -25,13 +23,13 @@
 ### Préparer la pâte
 
 - Mélanger:
-  1.  farine
-  2.  sucre
-  3.  sel
-  4.  purée
-  5.  levure activée
-  6.  les oeufs
-  7.  le reste d’eau
+  - farine
+  - sucre
+  - sel
+  - purée
+  - levure activée
+  - les oeufs
+  - le reste d’eau
 - Pétrir 5 minutes
 - Ajouter le beurre
 - Pétrir encore

@@ -1,6 +1,6 @@
 # Galettes croquantes de tronc de brocoli
 
-**Ingrédients :**
+### Ingrédients
 
 - 1 tronc de brocoli râpé
 - 1 petit oignon râpé ou émincé très fin
@@ -10,7 +10,7 @@
 - Sel, poivre
 - Un peu d’huile pour la cuisson
 
-**Préparation :**
+### Préparation
 
 1.  Dans un saladier, mélange le brocoli râpé, l’oignon, l’œuf, la farine, le fromage, sel et poivre.
 2.  Forme des petites galettes avec tes mains (si c’est trop liquide, ajoute un peu plus de farine).

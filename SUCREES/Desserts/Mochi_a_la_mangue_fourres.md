@@ -1,6 +1,7 @@
 # Mochi à la mangue fourrés
 
-### Ingrédients pour la pâte :
+### Ingrédients
+_pour la pâte_
 
 - 100 g de purée de mangue (bien lisse)
 - 120 g de lait
@@ -9,7 +10,8 @@
 - 30 g de sucre
 - 20 g d’huile neutre
 
-### Ingrédients pour la farce (au choix) :
+### Ingrédients
+_pour la farce (au choix)_
 
 - 🧁 **Crème fouettée** (nature ou vanillée)
 - 🍫 **Carrés de chocolat blanc** ou Nutella congelé en petites boules
@@ -18,7 +20,8 @@
 
 ------------------------------------------------------------------------
 
-### 🔄 Préparation de la pâte (micro-ondes) :
+### Préparation
+#### De la pâte (micro-ondes)
 
 1.  Mélange tous les ingrédients dans un bol allant au micro-ondes.
 2.  Couvre (film plastique percé ou assiette) et fais cuire :

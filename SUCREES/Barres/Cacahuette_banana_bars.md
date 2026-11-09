@@ -1,6 +1,7 @@
 # 🥣 Base commune : Banane – Beurre de cacahuète – Avoine – Noix
 
-### ✔️ Ingrédients (pour 1 portion)
+### Ingrédients
+_(pour 1 portion)_
 
 - 1 banane bien mûre
 
@@ -18,7 +19,7 @@
 
 Idéal si tu veux un truc frais, rapide, et onctueux.
 
-### 🔧 Préparation
+### Préparation
 
 1.  Écrase la banane dans un bol.
 
@@ -39,7 +40,7 @@ Une texture crémeuse/compacte, type *energy bite*.\
 
 Parfaite si tu veux un truc qui se garde 3–4 jours.
 
-### 🔧 Préparation
+### Préparation
 
 1.  Préchauffe le four à **180°C**.
 

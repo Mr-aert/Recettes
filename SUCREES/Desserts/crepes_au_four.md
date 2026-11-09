@@ -2,7 +2,7 @@
 
 Une recette express pour préparer une grande crêpe au four, sans avoir à rester devant la poêle !
 
-## Ingrédients
+### Ingrédients
 
 - 2 œufs
 - 400 g de lait
@@ -11,7 +11,7 @@ Une recette express pour préparer une grande crêpe au four, sans avoir à rest
 - 1 cuillère à soupe de sucre
 - 1 bière (optionnel)
 
-## Préparation
+### Préparation
 
 1. Préchauffer le four à **180 °C**.
 2. Dans un saladier, casser les œufs.

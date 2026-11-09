@@ -1,6 +1,7 @@
 # Tofu de lentilles corail (sans soja)
 
-### 🧾 Ingrédients (pour 1 bloc de tofu) :
+### Ingrédients
+_(pour 1 bloc de tofu)_
 
 - 200 g de lentilles corail (crues)
 - 600 ml d’eau
@@ -11,7 +12,7 @@
 
 ------------------------------------------------------------------------
 
-### 🔧 Préparation :
+### Préparation
 
 1.  **Faire tremper** les lentilles corail dans un grand volume d’eau pendant 2 heures (ou 1 nuit).
 2.  Égoutte-les puis **mixes-les** avec 600 ml d’eau jusqu’à obtenir une crème lisse.

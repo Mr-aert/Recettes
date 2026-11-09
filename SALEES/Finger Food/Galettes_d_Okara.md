@@ -1,4 +1,4 @@
-**Ingrédients :**
+### Ingrédients
 
 - 150 g d’okara (encore légèrement humide, pas détrempé)
 
@@ -14,7 +14,7 @@
 
 - Option : oignon finement émincé, fromage râpé
 
-**Préparation :**
+### Préparation
 
 1.  Mélange tout.
 

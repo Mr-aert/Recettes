@@ -1,6 +1,6 @@
 # Etoile carottes
 
-## Ingrédients
+### Ingrédients
 
 - 2 carottes
 - 60g parmesan rapé
@@ -8,7 +8,7 @@
 - 8cl huile
 - 1 CS eau
 
-## Recette
+### Préparation
 
 - Râper les carottes
 - Mélanger tout

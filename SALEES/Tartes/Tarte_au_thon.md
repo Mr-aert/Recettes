@@ -1,4 +1,5 @@
-### **Ingrédients (4–6 parts)**
+### Ingrédients
+_(4–6 parts)_
 
 - 1 pâte brisée
 
@@ -22,7 +23,7 @@
 
 - Herbes de Provence ou basilic
 
-### **Préparation**
+### Préparation
 
 1.  Préchauffe le four à 180°C.
 

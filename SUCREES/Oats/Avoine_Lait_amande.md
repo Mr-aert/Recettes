@@ -1,6 +1,7 @@
 # **💪🥣 Avoine – Lait d’amande – Beurre de cacahuète (version max protéines, sans poudre)**
 
-## **⭐ Ingrédients (1 bol)**
+### Ingrédients
+_(1 bol)_
 
 - **Flocons d’avoine : 50 g**
 
@@ -20,7 +21,7 @@
 
   - ½ banane ou quelques fruits rouges
 
-# **🧑‍🍳 Préparation**
+### Préparation
 
 ### **🔹 Version rapide**
 

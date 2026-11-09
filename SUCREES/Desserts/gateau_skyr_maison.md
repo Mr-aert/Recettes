@@ -2,7 +2,8 @@
 
 ### **Gâteau léger au yaourt maison filtré et compote**
 
-### 📝 Ingrédients (moule 18–20 cm)
+### Ingrédients
+_(moule 18–20 cm)_
 
 - 400 g de **yaourt maison égoutté** (voir instructions plus bas)
 - 3 **œufs**
@@ -15,7 +16,8 @@
 
 ------------------------------------------------------------------------
 
-### 🥣 Préparation du yaourt égoutté
+### Préparation
+#### Du yaourt égoutté
 
 1.  Place une passoire au-dessus d’un saladier.
 2.  Tapis la passoire avec une étamine, une gaze, un filtre à café permanent ou un torchon propre.
@@ -25,7 +27,8 @@
 
 ------------------------------------------------------------------------
 
-### 👨‍🍳 Préparation du gâteau
+### Préparation
+#### Du gâteau
 
 1.  **Préchauffe** ton four à 180°C.
 2.  **Sépare les blancs des jaunes** d’œufs.

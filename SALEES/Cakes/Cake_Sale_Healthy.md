@@ -1,6 +1,7 @@
 # Cake Salé Healthy aux Légumes & Flocons d’Avoine
 
-### Ingrédients (pour un moule standard) :
+### Ingrédients
+_(pour un moule standard)_
 
 - 3 œufs
 - 100 ml de lait (végétal ou écrémé)
@@ -16,7 +17,7 @@
 
 ------------------------------------------------------------------------
 
-### 🔪 Préparation :
+### Préparation
 
 1.  **Préchauffe le four** à 180°C.
 2.  Fais revenir rapidement l’oignon à la poêle avec un peu d’huile d’olive.

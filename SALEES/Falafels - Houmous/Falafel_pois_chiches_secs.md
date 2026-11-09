@@ -1,4 +1,4 @@
-### Ingrédients :
+### Ingrédients
 
 - 250 g de pois chiches secs (pas en boîte !)
 
@@ -20,7 +20,7 @@
 
 - Huile pour friture
 
-### Instructions :
+### Préparation
 
 1.  **Faire tremper les pois chiches** :\
     \

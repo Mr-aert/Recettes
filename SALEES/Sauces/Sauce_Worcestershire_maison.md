@@ -1,4 +1,4 @@
-### **Ingrédients**
+### Ingrédients
 
 - 120 ml **vinaigre de cidre\**
 
@@ -28,7 +28,7 @@
 
   - ½ c. à c. **pâte d’anchois** ou 1 anchois écrasé
 
-### **Préparation**
+### Préparation
 
 1.  Mets **tout dans une petite casserole**.
 

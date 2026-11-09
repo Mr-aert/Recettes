@@ -1,6 +1,6 @@
 # Frites patate douce air fryer
 
-### **Ingrédients :**
+### Ingrédients
 
 - 2 à 3 patates douces moyennes
 - 1 à 2 c. à soupe d’huile (olive ou tournesol)
@@ -9,7 +9,7 @@
 
 ------------------------------------------------------------------------
 
-### **Préparation :**
+### Préparation
 
 1. **Éplucher et découper :** épluche les patates douces (ou garde la peau selon ton goût), puis coupe-les en frites régulières, pas trop épaisses. Les fines seront plus croustillantes et les grosses plus moelleuses.
 2. **Faire tremper (facultatif) :** pour des frites plus croustillantes, trempe-les 15 à 20 minutes dans l’eau froide, puis sèche-les soigneusement.

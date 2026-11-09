@@ -1,19 +1,19 @@
 # Brownie au Brocolis
 
-# Ingrédients
+### Ingrédients
 
-| 1           | Brocolis         |
-|:------------|:-----------------|
-| 2           | oeufs            |
-| 160g        | farine           |
-| 1/2         | Feta             |
-| (optionnel) | lardons          |
-| 25cl        | lait             |
-|             | comté rapé       |
-| Epices      | sel, poivre, ail |
-| 1/2         | sachet levure    |
+- 1           Brocolis     
+- 1/2         sachet levure      
+- 2           oeufs           
+- 160g        farine          
+- 1/2         Feta            
+- (optionnel) lardons         
+- 25cl        lait            
+- comté rapé      
+- sel, poivre, ail
 
-# Recette
+
+### Préparation
 
 - hacher finement le brocolis cru
 - ajouter les autres ingredients et mélanger

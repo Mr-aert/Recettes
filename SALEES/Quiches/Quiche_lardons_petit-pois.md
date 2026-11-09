@@ -1,4 +1,4 @@
-### **Ingrédients**
+### Ingrédients
 
 #### **Pour la pâte à tarte sans beurre**
 
@@ -28,7 +28,7 @@
 
 - Poivre
 
-### **Instructions**
+### Préparation
 
 #### **Pour la pâte à tarte sans beurre**
 

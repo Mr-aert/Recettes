@@ -1,6 +1,7 @@
 # 
 
-### **Ingrédients** (pour 6-8 personnes) :
+### Ingrédients
+_(pour 6-8 personnes)_
 
 - 200gr de flocons d’avoine
 
@@ -16,7 +17,7 @@
 
 - 2 à 4cs de compote, ou cacao, ou café
 
-### **Préparation** :
+### Préparation
 
 1.  Mélanger les ingrédients de base
 

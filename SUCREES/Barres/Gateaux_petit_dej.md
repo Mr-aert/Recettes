@@ -1,6 +1,6 @@
 # Gateaux petit dej
 
-### Ingrédients :
+### Ingrédients
 
 - 300g de flocons d’avoine
 
@@ -22,7 +22,7 @@
 
   - Noix
 
-### 🔧 Préparation :
+### Préparation
 
 1.  Tout mélanger
 

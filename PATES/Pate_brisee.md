@@ -1,4 +1,4 @@
-### **Ingrédients**
+### Ingrédients
 
 
 - 250 g de farine
@@ -9,7 +9,7 @@
 
 - 1 pincée de sel fin
 
-### **Instructions**
+### Préparation
 
 1.  Dans un bol, versez la farine, l’huile, l’eau et une pincée de sel.
 

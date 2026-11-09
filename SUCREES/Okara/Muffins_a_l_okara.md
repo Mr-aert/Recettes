@@ -1,4 +1,4 @@
-**Ingrédients**
+### Ingrédients
 
 - 150 g d’okara
 
@@ -20,7 +20,7 @@
 
 - 50 g de chocolat noir en morceaux ou pépites *(facultatif)*
 
-**Préparation**
+### Préparation
 
 1.  Préchauffe le four à **180 °C chaleur traditionnelle**.
 

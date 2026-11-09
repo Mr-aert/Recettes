@@ -1,4 +1,4 @@
-### **Ingrédients**
+### Ingrédients
 
 - 2 bananes bien mûres
 
@@ -20,7 +20,7 @@
 
 - (option) cannelle / pépites de chocolat / noix
 
-### **Préparation**
+### Préparation
 
 1.  Écrase les bananes
 

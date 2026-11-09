@@ -1,4 +1,4 @@
-**Ingrédients :**
+### Ingrédients
 
 - 60 g de riz rond ou basmati
 
@@ -12,7 +12,8 @@
 
 - 1 banane
 
-**Préparation :**
+
+### Préparation
 
 1.  Rince le riz.
 

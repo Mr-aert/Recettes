@@ -1,4 +1,5 @@
-## Ingrédients (8 galettes épaisses)
+### Ingrédients
+_(8 galettes épaisses)_
 
 - 220 g de farine (idéalement moitié blanche, moitié semi-complète)
 - 60 g d’okara bien pressé
@@ -8,7 +9,7 @@
 - 30 g de miel (ou 20 g pour des galettes moins sucrées)
 - 40 à 50 ml d’eau ou de lait
 
-## Préparation
+### Préparation
 
 1. Préchauffe le four à 180 °C.
 2. Mélange la farine, l’okara, la levure et le sel.

@@ -2,7 +2,7 @@
 
 *Pour 4 personnes • Préparation : 15 min • Cuisson : 35–45 min*
 
-# Ingrédients
+### Ingrédients
 
 - 400 g de blancs de poulet
 
@@ -24,7 +24,7 @@
 
 - Sel et poivre
 
-# Préparation
+### Préparation
 
 **Préparer les ingrédients —** Éplucher les carottes, les pommes de terre et les oignons. Couper les légumes en petits morceaux.
 

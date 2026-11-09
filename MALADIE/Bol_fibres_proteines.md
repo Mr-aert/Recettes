@@ -1,4 +1,5 @@
-## **🧾 Ingrédients (1 grosse portion)**
+### Ingrédients
+_(1 grosse portion)_
 
 ### **Base protéines + fibres**
 
@@ -29,7 +30,7 @@
 - Sel, poivre\
   *(Option : ajoute 1 c. à café de tahini pour plus d’onctuosité)\*
 
-# **🍽️ Préparation**
+### Préparation
 
 1.  **Égoutte et rince** les pois chiches + lentilles.
 

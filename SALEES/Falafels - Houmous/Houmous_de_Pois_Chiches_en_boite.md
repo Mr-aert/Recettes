@@ -1,4 +1,4 @@
-### **Ingrédients**
+### Ingrédients
 
 - 1 boîte de **pois chiches** (400 g, soit ~240 g égouttés)
 
@@ -16,7 +16,7 @@
 
 - sel
 
-### **Préparation**
+### Préparation
 
 1.  **Rince bien** les pois chiches pour enlever le goût de conserve.
 

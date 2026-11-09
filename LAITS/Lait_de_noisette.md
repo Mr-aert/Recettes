@@ -1,4 +1,4 @@
-### **🔹 Ingrédients**
+### Ingrédients
 
 - 80 à 120 g de noisettes crues (non grillées, non salées)
 
@@ -6,7 +6,9 @@
 
 - Optionnel : pincée de sel, vanille, 1 datte si tu veux sucré
 
-### **1️⃣ Trempage (important)**
+### Préparation
+
+#### **1️⃣ Trempage (important)**
 
 - Torréfier les noisettes 10 min à 160°C avant trempage
 
@@ -14,13 +16,13 @@
 
 - Rince-les bien après.
 
-### **2️⃣ Dans la machine**
+#### **2️⃣ Dans la machine**
 
 - Mets les noisettes trempées + 1 L d’eau.
 
 - Lance le programme **“nut milk” / “plant milk” / “soymilk”** selon ta machine.
 
-### **3️⃣ Filtrage (si nécessaire)**
+#### **3️⃣ Filtrage (si nécessaire)**
 
 Si ta machine ne filtre pas parfaitement :
 

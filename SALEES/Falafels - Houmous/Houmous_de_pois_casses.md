@@ -1,6 +1,7 @@
 ### **Houmous de pois cassés**
 
-#### **🧺 Ingrédients (pour un bol)**
+### Ingrédients
+_(pour un bol)_
 
 - 200 g de **pois cassés secs\**
 
@@ -22,7 +23,7 @@
 
 *(Optionnel : un peu de paprika, zaatar, ou coriandre fraîche pour la finition)*
 
-### **🔥 Préparation**
+### Préparation
 
 1.  **Cuisson des pois cassés\**
 

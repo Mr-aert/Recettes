@@ -1,6 +1,6 @@
 # Salade de lentilles et feta
 
-**Ingrédients :**
+### Ingrédients
 
 - 200 g de lentilles (cuites)
 - 100 g de feta émiettée
@@ -11,7 +11,7 @@
 - 1 c. à soupe de vinaigre balsamique
 - Sel, poivre
 
-**Préparation :**
+### Préparation
 
 1.  Mélangez les lentilles, le concombre, la tomate et la feta dans un saladier.
 2.  Ajoutez la roquette.

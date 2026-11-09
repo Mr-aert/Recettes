@@ -3,7 +3,7 @@
 | **Pour 6 personnes** | **Préparation : 35 min** | **Cuisson : 2 h 30 à 3 h** |
 |:--------------------:|:------------------------:|:--------------------------:|
 
-# Ingrédients
+### Ingrédients
 
 - 1,2 kg de bœuf à braiser (paleron, macreuse ou joue)
 
@@ -29,7 +29,7 @@
 
 - Sel et poivre
 
-# Préparation
+### Préparation
 
 ## 1. Faire dorer la viande — 15 min
 

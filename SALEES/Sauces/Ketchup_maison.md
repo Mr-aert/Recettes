@@ -1,4 +1,4 @@
-### **Ingrédients**
+### Ingrédients
 
 - 500 g de **coulis de tomate** (ou tomates concassées)
 
@@ -22,7 +22,7 @@
 
 - 1 pincée de **clou de girofle moulu** (optionnel)
 
-### **Préparation**
+### Préparation
 
 1.  Fais revenir l’oignon dans l’huile d’olive à feu doux (5 min).
 

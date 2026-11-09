@@ -1,4 +1,4 @@
-### **Ingrédients**
+### Ingrédients
 
 - 120 g lentilles corail
 
@@ -14,7 +14,9 @@
 
 - 1 c. à s. de fécule de maïs **ou** 1 c. à c. de psyllium
 
-### **1️⃣ Trempage (important)**
+### Préparation
+
+#### **1️⃣ Trempage (important)**
 
 - Rince tout
 
@@ -22,7 +24,7 @@
 
 - Les lentilles corail peuvent tremper avec ou être ajoutées plus tard
 
-### **2️⃣ Cuisson**
+#### **2️⃣ Cuisson**
 
 - Égoutte
 
@@ -33,7 +35,7 @@
 - Mélange souvent\
   👉 tout doit être **très mou**, presque purée
 
-### **3️⃣ Mixage**
+#### **3️⃣ Mixage**
 
 - Mixe **très finement** (pas de grains visibles)
 
@@ -41,7 +43,7 @@
 
 - Mixe encore 30 s
 
-### **4️⃣ Cuisson finale (clé de la tenue)**
+#### **4️⃣ Cuisson finale (clé de la tenue)**
 
 - Remets sur feu doux
 
@@ -57,7 +59,7 @@
 
 👉 Si ça colle façon pâte à choux = parfait
 
-### **5️⃣ Moulage**
+#### **5️⃣ Moulage**
 
 - Verse dans un moule (filmé ou huilé)
 

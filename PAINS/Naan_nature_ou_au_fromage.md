@@ -1,6 +1,7 @@
 # Naan nature ou au fromage
 
-### Ingrédients (pour 6-8 naans) :
+### Ingrédients
+_(pour 6-8 naans)_
 
 - 300 g de farine (T45 ou T55)
 - 1 yaourt nature (125 g)
@@ -19,7 +20,7 @@
 
 ------------------------------------------------------------------------
 
-### 🔧 Préparation :
+### Préparation
 
 1. **Activer la levure :** mélange la levure de boulanger avec un peu d’eau tiède et le sucre. Laisse mousser 10 minutes.
 2. **Faire la pâte :** dans un saladier, mélange la farine, le sel et la levure chimique. Ajoute le yaourt, l’huile et la levure activée. Pétris en ajoutant un peu d’eau tiède jusqu’à obtenir une pâte souple, légèrement collante mais non liquide.

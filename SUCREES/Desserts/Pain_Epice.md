@@ -7,7 +7,7 @@ Un pain d'épices moelleux, parfumé et légèrement humide, sans beurre.
 - **Température :** 160 °C
 - **Portions :** 1 cake
 
-## Ingrédients
+### Ingrédients
 
 - 250 g de farine (T80 ou T65)
 - 150 g de miel
@@ -22,7 +22,7 @@ Un pain d'épices moelleux, parfumé et légèrement humide, sans beurre.
 - 1 pincée de sel
 - Facultatif : zestes d'orange
 
-## Préparation
+### Préparation
 
 1. Préchauffer le four à 160 °C (chaleur tournante).
 2. Faire chauffer doucement le lait avec le miel pour le liquéfier, sans le faire bouillir.

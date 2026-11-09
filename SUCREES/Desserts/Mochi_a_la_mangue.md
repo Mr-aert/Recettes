@@ -1,6 +1,6 @@
 # Mochi à la mangue
 
-**Ingrédients :**
+### Ingrédients
 
 - 100 g de purée de mangue (bien lisse)
 - 120 g de lait (végétal ou animal)
@@ -11,7 +11,7 @@
 
 ------------------------------------------------------------------------
 
-### 🔄 Préparation :
+### Préparation
 
 1.  Dans un grand bol allant au micro-ondes (verre ou céramique), **mélange** :
     - Purée de mangue

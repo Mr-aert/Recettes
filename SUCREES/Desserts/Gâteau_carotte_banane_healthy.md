@@ -1,4 +1,4 @@
-**Ingrédients**
+### Ingrédients
 
 2-3 bananes bien mûres
 
@@ -24,7 +24,7 @@ Option :
 
 Noix, amandes ou raisins secs (30–40 g)
 
-**Préparation**
+### Préparation
 
 Préchauffe le four à 180 °C.
 

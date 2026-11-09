@@ -1,4 +1,4 @@
-## **🔹 Ingrédients**
+### Ingrédients
 
 - 70 g amandes crues
 
@@ -10,7 +10,9 @@
 
 - Option : 1/2 c.à.c vanille OU 1 petite datte
 
-## **🔥 Étape clé : torréfaction partielle**
+### Préparation
+
+#### **🔥 Étape clé : torréfaction partielle**
 
 Pour un goût supérieur :
 
@@ -23,13 +25,13 @@ Pour un goût supérieur :
 
 Laisse refroidir.
 
-## **🕒 Trempage**
+#### **🕒 Trempage**
 
 - 6 à 8h (ensemble, après torréfaction des noisettes)
 
 - Rince bien
 
-## **⚙️ Machine**
+#### **⚙️ Machine**
 
 - Amandes + noisettes + 1 L eau
 

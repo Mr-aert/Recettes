@@ -1,4 +1,4 @@
-### **🔹 Ingrédients**
+### Ingrédients
 
 - 120 g d’ amandes crues (non grillées, non salées)
 
@@ -8,7 +8,9 @@
 
 - Optionnel : vanille, 1 datte si tu veux sucré
 
-### **1️⃣ Enlève la peau des amandes**
+### Préparation
+
+#### **1️⃣ Enlève la peau des amandes**
 
 - Fais bouillir une casserole d’eau.
 
@@ -18,7 +20,7 @@
 
 - Presse chaque amande entre le pouce et l’index
 
-### **1️⃣ Trempage (important)**
+#### **1️⃣ Trempage (important)**
 
 - Torréfier les amandes 10 min à 160°C avant trempage
 
@@ -26,13 +28,13 @@
 
 - Rince-les bien après.
 
-### **2️⃣ Dans la machine**
+#### **2️⃣ Dans la machine**
 
 - Mets les amandes + 1 L d’eau.
 
 - Lance le programme **“nut milk” / “plant milk” / “soymilk”** selon ta machine.
 
-### **3️⃣ Filtrage (si nécessaire)**
+#### **3️⃣ Filtrage (si nécessaire)**
 
 Si ta machine ne filtre pas parfaitement :
 

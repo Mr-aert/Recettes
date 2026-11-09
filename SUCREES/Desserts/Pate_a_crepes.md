@@ -1,6 +1,6 @@
 Recette classique • environ 12 à 15 crêpes
 
-# Ingrédients
+### Ingrédients
 
 - 250 g de farine
 
@@ -16,7 +16,7 @@ Recette classique • environ 12 à 15 crêpes
 
 - 1 cuillère à café de vanille (facultatif)
 
-# Préparation
+### Préparation
 
 **Mélanger les ingrédients secs.** Verse la farine et le sel dans un saladier. Ajoute le sucre si tu souhaites des crêpes sucrées.
 

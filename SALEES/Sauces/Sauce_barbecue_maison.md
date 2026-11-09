@@ -1,4 +1,4 @@
-#### **Ingrédients**
+### Ingrédients
 
 - 200 ml de **ketchup**
 
@@ -20,7 +20,7 @@
 
 - Sel (si besoin)
 
-#### **Préparation**
+### Préparation
 
 1.  Mets tout dans une casserole.
 

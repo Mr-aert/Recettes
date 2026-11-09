@@ -1,6 +1,6 @@
 ### **🍌 Banana Bread Light (sans huile, peu sucré)**
 
-#### **Ingrédients :**
+### Ingrédients
 
 - 3 bananes bien mûres
 
@@ -22,7 +22,7 @@
 
 - 1 c. à café de cannelle (optionnel)
 
-#### **Préparation :**
+### Préparation
 
 1.  Préchauffe ton four à 175 °C.
 

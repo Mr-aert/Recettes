@@ -1,6 +1,6 @@
 *Pour environ 10 tranches*
 
-# Ingrédients
+### Ingrédients
 
 - 1200 g de fromage blanc ou de skyr
 
@@ -18,7 +18,7 @@ Graines et fruits à coque (au choix) :
 
 - 50 à 100 g de noix ou de mélange de noix
 
-# Préparation
+### Préparation
 
 1.  Préchauffer le four à 180 °C.
 

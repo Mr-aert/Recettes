@@ -1,6 +1,6 @@
 # Frites maison au air fryer
 
-### **Ingrédients :**
+### Ingrédients
 
 - Pommes de terre (type Bintje ou autre à chair farineuse)
 - Un peu d’huile (1 à 2 c. à soupe)
@@ -9,7 +9,7 @@
 
 ------------------------------------------------------------------------
 
-### **Préparation :**
+### Préparation
 
 1. **Éplucher et découper :** épluche les pommes de terre ou garde la peau pour un côté rustique, puis coupe-les en frites régulières.
 2. **Faire tremper :** mets les frites dans un saladier d’eau froide pendant 30 minutes à 1 heure pour retirer l’excès d’amidon et les rendre plus croustillantes.

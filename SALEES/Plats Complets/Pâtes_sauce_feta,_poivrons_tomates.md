@@ -1,4 +1,4 @@
-**Ingrédients**
+### Ingrédients
 
 - 200 g de pâtes
 
@@ -22,7 +22,7 @@
 
 - Facultatif : piment, basilic frais
 
-**Préparation**
+### Préparation
 
 1.  **Rôtir les légumes\**
     Coupe le poivron en lanières et les tomates cerises en deux. Mélange avec l’huile, l'ail, l’origan, le paprika et du poivre.\

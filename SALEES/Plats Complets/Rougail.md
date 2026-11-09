@@ -2,7 +2,7 @@
 
 ### **Rougail Saucisse Réunionnais** (4 personnes)
 
-### 🛒 Ingrédients :
+### Ingrédients
 
 - 4 saucisses fumées ou fraîches (style Montbéliard, Toulouse ou saucisses créoles si tu en trouves)
 
@@ -22,7 +22,7 @@
 
 - Sel, poivre
 
-### 🍳 Préparation :
+### Préparation
 
 1.  **Pré-cuire les saucisses** :
 

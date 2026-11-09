@@ -2,7 +2,7 @@
 
 ### 🥖 **Pain Sportif Maison**
 
-### 🏋️‍♂️ Ingrédients :
+### Ingrédients
 
 - **150 g de flocons d’avoine**
 - **100 g de farine complète** (ou farine d’épeautre, ou avoine)
@@ -14,7 +14,7 @@
 - **1 c. à soupe d’huile d’olive ou de coco**
 - **Optionnel :** noix, graines de tournesol, cranberries, abricots sec, raisins secs
 
-### 🔧 Préparation :
+### Préparation
 
 1.  **Préchauffe le four** à 180°C (356°F).
 2.  Dans un grand saladier, mélange tous les ingrédients secs : flocons d’avoine, farine, protéine en poudre, levure, sel, graines.

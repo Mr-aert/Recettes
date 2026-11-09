@@ -1,4 +1,5 @@
-## Ingrédients (8 à 10 galettes)
+### Ingrédients
+_(8 à 10 galettes)_
 
 - 225 g de farine (blanche ou moitié blé, moitié complète)
 - 1 c. à café de levure chimique
@@ -8,7 +9,7 @@
 - 120 ml de crème liquide (ou de lait entier)
 - (Optionnel) ½ c. à café de vanille ou un peu de zeste de citron
 
-## Préparation
+### Préparation
 
 1. Préchauffe le four à 180 °C.
 2. Mélange la farine, la levure et le sel.

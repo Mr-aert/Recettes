@@ -1,6 +1,7 @@
 # Gâteau banane-flocons d’avoine
 
-### **Ingrédients** (pour 6-8 personnes) :
+### Ingrédients
+_(pour 6-8 personnes)_
 
 - 2 bananes bien mûres
 - 2 œufs
@@ -13,7 +14,7 @@
 - 1 pincée de sel
 - Quelques noix ou pépites de chocolat (optionnel)
 
-### **Préparation** :
+### Préparation
 
 1.  Préchauffez le four à 180°C.
 2.  Écrasez les bananes dans un saladier.

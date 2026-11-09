@@ -4,7 +4,7 @@
 - **Cuisson :** 35 min
 - **Température :** 180 °C
 
-## Ingrédients
+### Ingrédients
 
 - 6 pommes
 - 4 œufs
@@ -15,7 +15,7 @@
 - 1 sachet de levure chimique
 - 2 cuillères à café de vanille
 
-## Préparation
+### Préparation
 
 1. Éplucher les pommes et les couper en fines lamelles.
 2. Dans un saladier, mélanger les œufs, le lait, la vanille, le sucre et le beurre fondu.

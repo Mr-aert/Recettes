@@ -1,6 +1,6 @@
 # fond de tarte
 
-### Ingrédients :
+### Ingrédients
 
 - 250 g de farine
 - 125 g de beurre froid coupé en petits morceaux
@@ -9,7 +9,7 @@
 - 1 œuf
 - (optionnel) 1 c. à café d’extrait de vanille ou de zeste de citron pour parfumer
 
-### Préparation :
+### Préparation
 
 1.  **Mélange à sec** : Dans un saladier, mélange la farine, le sucre glace et le sel.
 2.  **Sablage** : Ajoute le beurre froid et travaille du bout des doigts jusqu’à obtenir une texture sableuse (comme du crumble).

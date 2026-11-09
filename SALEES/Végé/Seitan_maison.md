@@ -1,6 +1,6 @@
 ## **🧑‍🍳 Seitan maison 100 % maison (gluten fait main)**
 
-### **🌾 Ingrédients**
+### Ingrédients
 
 #### **🔸 Pour le gluten :**
 
@@ -28,42 +28,40 @@
 
 - (optionnel mais conseillé) : un peu de sauce soja, une feuille de laurier, 1 gousse d’ail, un petit morceau d’oignon
 
-\
--
 
-## **🥣 Préparation**
+### Préparation
 
 ### **1️⃣ Faire le gluten**
 
-1.  Mélange la farine et l’eau, pétris une pâte ferme.
+-  Mélange la farine et l’eau, pétris une pâte ferme.
 
-2.  Laisse reposer 30 min.
+-  Laisse reposer 30 min.
 
-3.  Lave la pâte sous l’eau froide plusieurs fois jusqu’à ce que l’eau devienne presque claire.
+-  Lave la pâte sous l’eau froide plusieurs fois jusqu’à ce que l’eau devienne presque claire.
 
-4.  Égoutte bien → tu obtiens une boule élastique de **gluten pur**.
+-  Égoutte bien → tu obtiens une boule élastique de **gluten pur**.
 
 ### **2️⃣ Préparer le mélange de seitan**
 
-1.  Dans un grand saladier, mélange la farine de pois chiche (ou soja), la poudre d’amande, les épices et le sel.
+-  Dans un grand saladier, mélange la farine de pois chiche (ou soja), la poudre d’amande, les épices et le sel.
 
-2.  Ajoute ton gluten fait maison (en morceaux) et mélange à la main ou au robot pour bien incorporer.
+-  Ajoute ton gluten fait maison (en morceaux) et mélange à la main ou au robot pour bien incorporer.
 
-3.  Verse petit à petit l’eau et la sauce soja.
+-  Verse petit à petit l’eau et la sauce soja.
 
-4.  Pétris 3–5 min pour obtenir une pâte homogène et ferme (elle doit être souple mais pas collante).
+-  Pétris 3–5 min pour obtenir une pâte homogène et ferme (elle doit être souple mais pas collante).
 
-5.  Forme une boule ou un boudin.
+-  Forme une boule ou un boudin.
 
 ### **3️⃣ Cuisson**
 
-1.  Porte à ébullition 2 L d’eau avec les cubes de bouillon et les aromates.
+-  Porte à ébullition 2 L d’eau avec les cubes de bouillon et les aromates.
 
-2.  **Baisse à feu doux** (le bouillon doit juste frémir, pas bouillir fort).
+-  **Baisse à feu doux** (le bouillon doit juste frémir, pas bouillir fort).
 
-3.  Plonge le seitan dedans et laisse **pocher 1 h** à feu très doux.
+-  Plonge le seitan dedans et laisse **pocher 1 h** à feu très doux.
 
-4.  Laisse **refroidir dans le bouillon** (important pour la texture).
+-  Laisse **refroidir dans le bouillon** (important pour la texture).
 
 ### **4️⃣ Finition**
 

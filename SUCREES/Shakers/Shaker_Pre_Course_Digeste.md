@@ -1,4 +1,4 @@
-**Ingrédients**
+### Ingrédients
 
 - 200–250 ml de **lait de soja** (ou avoine, ou eau + un peu de jus de pomme pour plus de glucides)
 
@@ -13,6 +13,6 @@
 
 - 1 petite pincée de **sel** (top si tu transpires beaucoup)
 
-### **Mix**
+### Préparation
 
 Tout blender → texture lisse → boire lentement.

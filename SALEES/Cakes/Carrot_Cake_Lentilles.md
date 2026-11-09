@@ -1,6 +1,7 @@
 # Carrot Cake Carottes Lentilles
 
-### Ingrédients (pour 1 moule à cake standard – 6 parts)
+### Ingrédients
+_(pour 1 moule à cake standard – 6 parts)_
 
 - 120 g de **lentilles corail**
 

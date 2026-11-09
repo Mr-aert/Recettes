@@ -1,6 +1,6 @@
 # Galettes de légumes maison
 
-**Ingrédients :**
+### Ingrédients
 
 - 2 carottes râpées
 - 1 courgette râpée
@@ -10,7 +10,7 @@
 - Sel, poivre, herbes (persil ou coriandre)
 - Huile pour la cuisson
 
-**Préparation :**
+### Préparation
 
 1.  Mélangez tous les légumes râpés avec l’œuf, la farine, le sel, le poivre et les herbes.
 2.  Formez des petites galettes avec vos mains.

@@ -1,14 +1,13 @@
 # Soleil Brocolis
 
-# Ingrédients
+### Ingrédients
 
-| 2        | pates feuilletées            |
-|:---------|:-----------------------------|
-| 100g     | brocolis cuit                |
-| 2 à 3 CS | fromage à tartiner (ricotta) |
-| 40g      | Fromage rapé                 |
+- 2        pates feuilletées            
+- 100g     brocolis cuit                
+- 2 à 3 CS fromage à tartiner (ricotta) 
+- 40g      Fromage rapé                 
 
-# Recette
+### Préparation
 
 - Cuire le brocolis 20m
 - Ensuite l’écraser en purée et le saler un peu

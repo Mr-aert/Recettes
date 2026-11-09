@@ -6,7 +6,7 @@
 
 ### **✔️ Reste liquide au frigo**
 
-## **Ingrédients**
+### Ingrédients
 
 - **200 ml d’eau\**
 
@@ -20,6 +20,6 @@
 
 - (Optionnel) 1 **càs poudre d’amande**
 
-## Préparation
+### Préparation
 
 Mixer tous les ingrédients jusqu’à obtenir une texture homogène, puis boire.

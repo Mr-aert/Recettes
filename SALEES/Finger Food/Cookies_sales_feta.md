@@ -1,26 +1,18 @@
-**Ingrédients (10–12 cookies)**
+### Ingrédients
+_(10–12 cookies)_
 
-120 g de farine (blé ou épeautre)
+- 120 g de farine (blé ou épeautre)
+- 60 g de beurre mou
+- 1 œuf
+- 80 g de feta émiettée
+- ½ sachet de levure chimique
+- Poivre (pas de sel → la feta s’en charge)
+- 1 c. à c. d’origan ou thym
+- Option bonus :
+    - 1 c. à s. d’huile d’olive
+    - Zeste de citron (un peu, ça claque)
 
-60 g de beurre mou
-
-1 œuf
-
-80 g de feta émiettée
-
-½ sachet de levure chimique
-
-Poivre (pas de sel → la feta s’en charge)
-
-1 c. à c. d’origan ou thym
-
-Option bonus :
-
-1 c. à s. d’huile d’olive
-
-Zeste de citron (un peu, ça claque)
-
-**Préparation**
+### Préparation
 
 Préchauffe le four à 180 °C.
 

@@ -1,6 +1,6 @@
 **Idéal juste après la course (0–30 min).**
 
-**Ingrédients :**
+### Ingrédients
 
 - 250 ml lait de soja ou d’amande
 
@@ -19,3 +19,7 @@
 - Un tour de poivre noir
 
 - ½ c. café en poudre de gingembre
+
+### Préparation
+
+Mixe tous les ingrédients jusqu’à obtenir une boisson homogène.

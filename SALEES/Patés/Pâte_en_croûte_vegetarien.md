@@ -1,6 +1,6 @@
 # Pâté en croûte végétarien
 
-### **Ingrédients**
+### Ingrédients
 
 **Pour la pâte (ou utiliser une pâte brisée/feuilletée végétalienne du commerce) :**
 
@@ -40,7 +40,7 @@
 
 - Lait végétal + un peu de sirop d’érable ou huile (optionnel)
 
-### **Préparation**
+### Préparation
 
 1.  **Prépare la pâte** : mélange farine, sel, et margarine. Ajoute de l’eau petit à petit jusqu’à obtenir une pâte homogène. Laisse reposer au frais 30 min.
 

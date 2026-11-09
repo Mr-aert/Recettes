@@ -2,7 +2,7 @@
 
 Une pâte à cookies sans œuf et sans farine, à manger directement à la cuillère ou à façonner en petites bouchées. Les pois chiches apportent la texture et les fibres ; le beurre de cacahuète donne le côté crémeux.
 
-# Ingrédients
+### Ingrédients
 
 - 125 g de pois chiches cuits (poids égoutté), rincés et très bien séchés
 
@@ -16,7 +16,7 @@ Une pâte à cookies sans œuf et sans farine, à manger directement à la cuill
 
 - 30 g de pépites de chocolat noir
 
-# Préparation
+### Préparation
 
 1.  Rincer les pois chiches, les égoutter puis les sécher soigneusement. Cette étape évite que la pâte soit trop humide.
 

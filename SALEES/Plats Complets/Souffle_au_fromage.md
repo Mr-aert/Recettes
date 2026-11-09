@@ -1,4 +1,4 @@
-### **Ingrédients**
+### Ingrédients
 
 - 40 g de beurre
 
@@ -16,7 +16,7 @@
 
 - Une pincée de muscade (optionnel mais top)
 
-## **🔥 Étapes**
+### Préparation
 
 ### **1️⃣ Prépare le moule**
 

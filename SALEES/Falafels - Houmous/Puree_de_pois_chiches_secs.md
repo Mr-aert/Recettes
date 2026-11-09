@@ -1,6 +1,6 @@
 # **🥣 Purée de pois chiches (avec pois chiches secs)**
 
-## **🌱 Ingrédients**
+### Ingrédients
 
 - 250 g de pois chiches secs
 
@@ -16,7 +16,7 @@
 
 - Épices au choix : cumin, paprika, poivre…
 
-# **🧑‍🍳 Étapes**
+### Préparation
 
 ## **1) Trempage**
 
@@ -72,59 +72,3 @@ Ajoute de l’eau de cuisson **petit à petit** jusqu’à la texture désirée 
 - Mixer **chaud** donne une purée plus lisse.
 
 - Tu peux ajouter 1–2 c. à soupe de **crème fraîche**, **crème de coco** ou **yaourt** si tu veux une version plus onctueuse.
-
-# Accompagnements
-
-# **🥑 1. Une source de gras “sain” (important pour l’équilibre)**
-
-Au choix :
-
-- Un filet **d’huile d’olive** sur les brocolis
-
-- Quelques **noix / amandes / graines\**
-
-- Quelques lamelles d’**avocat\**
-
-- Une petite sauce yaourt + huile d’olive + citron
-
-> Ça améliore la satiété et l’absorption des vitamines du brocoli.
-
-# **🍚 2. Un féculent pour l’énergie**
-
-Si tu veux un repas plus complet et qui tient au ventre :
-
-- **Riz** (basmati, complet ou pilaf)
-
-- **Semoule** (hyper rapide)
-
-- **Quinoa** (très bon combo protéines + légumineuses)
-
-- **Pâtes complètes\**
-
-- **Pain complet** ou pain pita grillé
-
-> Pois chiches + céréales = meilleures protéines végétales complètes.
-
-# **🍳 3. Une source de protéines complémentaire (toujours végétarienne)**
-
-- **Œufs durs** ou mollets
-
-- **Omelette nature** ou aux herbes
-
-- **Tofu grillé** mariné (soja + ail + citron)
-
-- **Halloumi** grillé (trop bon avec brocoli + pois chiches)
-
-# **🍅 4. Une fraîcheur en plus**
-
-Pour un repas plus gourmand :
-
-- Tomates cerises
-
-- Concombre
-
-- Oignons rouges
-
-- Herbes (persil, coriandre)
-
-- Un petit yaourt aux herbes en sauce

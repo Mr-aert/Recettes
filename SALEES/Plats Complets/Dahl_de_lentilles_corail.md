@@ -1,6 +1,6 @@
 # Dahl de lentilles corail au lait de coco
 
-### 🧺 Ingrédients :
+### Ingrédients
 
 - 1 oignon
 
@@ -24,7 +24,7 @@
 
 - Coriandre fraîche pour servir (optionnel)
 
-### 🔪 Préparation :
+### Préparation
 
 1.  **Fais revenir** l’oignon émincé dans un peu d’huile à feu moyen.
 

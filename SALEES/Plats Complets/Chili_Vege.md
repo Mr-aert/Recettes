@@ -1,6 +1,7 @@
 # Chili Végé
 
-### **Ingrédients (pour 4-6 personnes)**
+### Ingrédients
+_(pour 4-6 personnes)_
 
 **Base :**
 
@@ -46,7 +47,7 @@
 
 - 1 trait de jus de citron ou de vinaigre de cidre (en fin de cuisson pour relever)
 
-### **Instructions**
+### Préparation
 
 1.  **Faire revenir** l’oignon dans l’huile d’olive 5 minutes à feu moyen.
 

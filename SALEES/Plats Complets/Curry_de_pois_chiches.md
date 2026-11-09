@@ -1,6 +1,6 @@
 # Curry de pois chiches
 
-**Ingrédients :**
+### Ingrédients
 
 - 1 boîte de pois chiches (égouttés et rincés)
 - 1 boîte de lait de coco
@@ -12,7 +12,7 @@
 - Sel, poivre
 - Riz basmati pour accompagner
 
-**Préparation :**
+### Préparation
 
 1.  Faites revenir l’oignon et l’ail dans une poêle avec un peu d’huile.
 2.  Ajoutez les tomates concassées, le lait de coco et les épices. Laissez mijoter 5 minutes.

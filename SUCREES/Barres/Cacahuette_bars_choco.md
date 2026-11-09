@@ -1,6 +1,7 @@
 # 
 
-### **Ingrédients** (pour 6-8 personnes) :
+### Ingrédients
+_(pour 6-8 personnes)_
 
 - 200gr de beurre de cacahuètes
 
@@ -12,7 +13,7 @@
 
 - chocolat
 
-### **Préparation** :
+### Préparation
 
 1.  Mélanger les ingrédients de base
 

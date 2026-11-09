@@ -1,4 +1,5 @@
-### **🧄 Ingrédients (pour 12 à 15 falafels)**
+### Ingrédients
+_(pour 12 à 15 falafels)_
 
 - 1 grosse **courgette râpée** (environ 250 g)
 
@@ -24,7 +25,7 @@
 
 - Un filet d’**huile d’olive** pour la cuisson
 
-### **🥣 Préparation**
+### Préparation
 
 1.  **Égoutte** bien les pois chiches, rince-les.
 

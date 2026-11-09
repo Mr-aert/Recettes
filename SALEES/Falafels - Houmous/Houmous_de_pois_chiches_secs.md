@@ -1,4 +1,4 @@
-### **Ingrédients**
+### Ingrédients
 
 - 250 g de **pois chiches secs**
 
@@ -18,7 +18,7 @@
 
 - Eau de cuisson (ou eau très froide)
 
-### **Préparation**
+### Préparation
 
 #### **1️⃣ Trempage (obligatoire)**
 

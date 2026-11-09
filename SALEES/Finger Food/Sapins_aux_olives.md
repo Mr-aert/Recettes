@@ -1,6 +1,6 @@
 # Sapins aux olives
 
-## Ingrédients
+### Ingrédients
 
 - 100g farine
 - 50g parmesan rapé
@@ -9,7 +9,7 @@
 - 50g d’olives en morceaux
 - 1 oeuf
 
-## Recette
+### Préparation
 
 - Mélanger farine, sel, parmesan, cheddar et beurre
 - Former la pâte

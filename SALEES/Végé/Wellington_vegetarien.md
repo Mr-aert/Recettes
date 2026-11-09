@@ -14,7 +14,7 @@ Résultat attendu : intérieur fondant et structuré, croûte dorée qui tient �
 
 ---
 
-🛒 **Ingrédients**
+### Ingrédients
 
 🥧 Pâte brisée salée (idéale Wellington)
 
@@ -72,115 +72,76 @@ Sel, poivre
 
 ---
 
-👨‍🍳 **Préparation**
+### Préparation
 
 ---
 
 1️⃣ **Pâte brisée salée**
 
-1\. Mélanger la farine et le sel
-
-2\. Ajouter le beurre froid et sabler rapidement du bout des doigts
-
-3\. Verser l’eau froide petit à petit
-
-4\. Former une boule sans trop pétrir
-
-5\. Filmer et laisser reposer 30 minutes au réfrigérateur
-
-\> Objectif : pâte souple, non collante, résistante au roulage
+- Mélanger la farine et le sel
+- Ajouter le beurre froid et sabler rapidement du bout des doigts
+- Verser l’eau froide petit à petit
+- Former une boule sans trop pétrir
+- Filmer et laisser reposer 30 minutes au réfrigérateur
+    - Objectif : pâte souple, non collante, résistante au roulage
 
 ---
 
 2️⃣ **Fondue de poireaux**
 
-1\. Laver et émincer finement les poireaux
-
-2\. Les faire revenir doucement avec l’huile d’olive
-
-3\. Couvrir et laisser fondre 20 minutes à feu doux
-
-4\. Saler, poivrer
-
-5\. Égoutter si nécessaire
-
-\> Les poireaux doivent être fondants mais non aqueux
+- Laver et émincer finement les poireaux
+- Les faire revenir doucement avec l’huile d’olive
+- Couvrir et laisser fondre 20 minutes à feu doux
+- Saler, poivrer
+- Égoutter si nécessaire
+    - Les poireaux doivent être fondants mais non aqueux
 
 ---
 
 3️⃣ **Duxelles de champignons (étape clé)**
 
-1\. Hacher très finement champignons, oignon et ail
-
-2\. Faire cuire à sec jusqu’à évaporation totale de l’eau
-
-3\. Ajouter un peu d’huile si nécessaire
-
-4\. Incorporer sauce soja salée, miso, thym et poivre
-
-5\. Poursuivre la cuisson jusqu’à obtenir une texture pâteuse et sèche
-
-⚠️ Toute humidité restante compromet la tenue du Wellington
+- Hacher très finement champignons, oignon et ail
+- Faire cuire à sec jusqu’à évaporation totale de l’eau
+- Ajouter un peu d’huile si nécessaire
+- Incorporer sauce soja salée, miso, thym et poivre
+- Poursuivre la cuisson jusqu’à obtenir une texture pâteuse et sèche
+    ⚠️ Toute humidité restante compromet la tenue du Wellington
 
 ---
 
 4️⃣ **Farce**
 
-1\. Mixer grossièrement :
+- Mixer grossièrement :
+    - lentilles
+    - noix
+    - duxelles
+    - chapelure
+    - paprika fumé
 
-- lentilles
-
-<!-- -->
-
-- noix
-
-<!-- -->
-
-- duxelles
-
-<!-- -->
-
-- chapelure
-
-<!-- -->
-
-- paprika fumé
-
-2\. Goûter et ajuster l’assaisonnement
-
-\> Texture finale : pâté ferme, jamais une purée
+- Goûter et ajuster l’assaisonnement
+    - Texture finale : pâté ferme, jamais une purée
 
 ---
 
 5️⃣ **Montage**
 
-1\. Étaler la pâte brisée sur 3–4 mm d’épaisseur
-
-2\. (Optionnel) Étaler une fine couche de moutarde
-
-3\. Disposer une couche de fondue de poireaux
-
-4\. Déposer le boudin de farce au centre
-
-5\. Refermer délicatement la pâte
-
-6\. Souder les bords
-
-7\. Décorer le dessus
-
-8\. Badigeonner de dorure
+- Étaler la pâte brisée sur 3–4 mm d’épaisseur
+- (Optionnel) Étaler une fine couche de moutarde
+- Disposer une couche de fondue de poireaux
+- Déposer le boudin de farce au centre
+- Refermer délicatement la pâte
+- Souder les bords
+- Décorer le dessus
+- Badigeonner de dorure
 
 ---
 
 6️⃣ **Cuisson**
 
-Préchauffer le four à 180°C (chaleur statique)
-
-Enfourner 40 à 45 minutes
-
-Si coloration trop rapide : couvrir de papier aluminium
-
-Laisser reposer 10 minutes minimum avant découpe
+- Préchauffer le four à 180°C (chaleur statique)
+- Enfourner 40 à 45 minutes
+- Si coloration trop rapide : couvrir de papier aluminium
+- Laisser reposer 10 minutes minimum avant découpe
 
 ---
 

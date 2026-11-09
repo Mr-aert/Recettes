@@ -1,4 +1,4 @@
-### **Ingrédients**
+### Ingrédients
 
 - 200 g de chocolat noir (idéalement 60–70 %)
 
@@ -12,7 +12,7 @@
 
 - 1 pincée de sel
 
-### **Préparation**
+### Préparation
 
 1.  **Préchauffe** le four à 180°C.
 

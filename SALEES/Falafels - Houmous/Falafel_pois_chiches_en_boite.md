@@ -1,4 +1,4 @@
-**Ingrédients :**
+### Ingrédients
 
 - 1 boîte de pois chiches (400 g, égouttés et rincés)
 
@@ -22,7 +22,7 @@
 
 - Huile pour cuisson
 
-### **Préparation :**
+### Préparation
 
 1.  **Mixer les ingrédients** :\
     \

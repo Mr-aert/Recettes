@@ -1,6 +1,6 @@
 ## **Pâte brisée maison**
 
-### **Ingrédients**
+### Ingrédients
 
 - 250 g de farine
 
@@ -12,7 +12,7 @@
 
 ## **Appareil à flan**
 
-### **Ingrédients**
+### Ingrédients
 
 - 1 L de lait
 
@@ -28,7 +28,7 @@
 
 - 1 pincée de sel
 
-## **Préparation**
+### Préparation
 
 ### **La veille — appareil à flan**
 

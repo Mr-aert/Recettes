@@ -1,4 +1,4 @@
-### **Ingrédients**
+### Ingrédients
 
 - 100 g d’okara de noisette
 
@@ -16,7 +16,7 @@
 
 - Pépites de chocolat noir (généreux)
 
-### **🔹 Préparation**
+### Préparation
 
 1.  Mélange tout.
 

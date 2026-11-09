@@ -1,6 +1,7 @@
 # Salade thaï au poulet et lait de coco
 
-**Ingrédients (pour 2 personnes)** :
+### Ingrédients
+_(pour 2 personnes)_
 
 - 1 blanc de poulet cuit (ou tofu pour une version végétarienne)
 - 100 ml de lait de coco (léger si tu veux limiter les graisses)
@@ -15,7 +16,7 @@
 - Un peu de gingembre râpé (optionnel)
 - Un filet d’huile de sésame
 
-**Préparation** :
+### Préparation
 
 1.  Dans un bol, mélange le lait de coco, la sauce soja, le citron vert, l’huile de sésame et le gingembre.
 2.  Coupe le poulet (ou tofu) en dés et laisse-le mariner 10–15 min dans la sauce.

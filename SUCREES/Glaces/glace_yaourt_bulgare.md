@@ -1,6 +1,7 @@
 ## **🍦 Version simple (sans sorbetière)**
 
-### **Ingrédients (4–6 portions)**
+### Ingrédients
+_(4–6 portions)_
 
 - 500 g de yaourt bulgare (ou yaourt grec entier)
 
@@ -14,7 +15,7 @@
 
 - 1 c. à soupe de miel (anti-cristallisation naturel)
 
-### **Étapes**
+### Préparation
 
 1.  **Mélange**
 

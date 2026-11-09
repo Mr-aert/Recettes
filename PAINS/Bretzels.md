@@ -1,8 +1,8 @@
 # Bretzels
 
-**Ll.Bretzels**
 
-### 🥨 Ingrédients (pour 8 bretzels)
+### Ingrédients
+_(pour 8 bretzels)_
 
 **Pâte :**
 
@@ -25,7 +25,7 @@
 
 ------------------------------------------------------------------------
 
-### 🧑‍🍳 Préparation
+### Préparation
 
 1.  **Préparer la pâte :**
     - Mélange la levure avec un peu d’eau tiède et le sucre, laisse reposer 10 min.

@@ -1,4 +1,5 @@
-**<u>Ingrédients:</u>** (pour 4 personnes)
+### Ingrédients
+_(pour 4 personnes)_
 
 - 240g de riz
 
@@ -28,7 +29,7 @@
 
 - sel, poivre
 
-**<u>Préparation:</u>**
+### Préparation
 
 1.  Émincer tous les ingrédients: couper le poulet et la tranche de jambon en dès, la saucisse en rondelles. Émincer finement l'oignon, hacher l'ail avec le persil. Couper le céleri en fines rondelles, le poivron et les tomates en petits dès.
 

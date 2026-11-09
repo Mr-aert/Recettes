@@ -1,6 +1,5 @@
-*Préparation type congee*
 
-# Ingrédients
+### Ingrédients
 
 - 1 volume de riz rond
 
@@ -8,7 +7,7 @@
 
 - Quelques morceaux de gingembre frais
 
-# Préparation
+### Préparation
 
 1.  Laver le riz plusieurs fois, jusqu’à ce que l’eau de rinçage soit plus claire.
 

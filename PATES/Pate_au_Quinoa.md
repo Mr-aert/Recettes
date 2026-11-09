@@ -1,4 +1,4 @@
-### **Ingrédients**
+### Ingrédients
 
 - 150 g de Farine (riz ou Sarrasin ou Epeautre)
 
@@ -10,7 +10,7 @@
 
 - 1 pincée de sel
 
-### **Préparation**
+### Préparation
 
 1.  Préchauffe le four à 180°C.
 
